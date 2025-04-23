@@ -1,7 +1,14 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
+  
+  // Don't render footer on home page
+  if (isHomePage) {
+    return null;
+  }
 
   return (
     <footer className="bg-primary text-white py-8 dark:bg-gray-900">

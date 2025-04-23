@@ -1,8 +1,15 @@
 import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
+
+  // Don't render navbar on home page
+  if (isHomePage) {
+    return null;
+  }
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -20,7 +27,7 @@ const Navbar = () => {
     <nav className="bg-white shadow-md dark:bg-gray-800 dark:border-b dark:border-gray-700">
       <div className="container py-4 flex justify-between items-center">
         <NavLink to="/" className="text-2xl font-bold text-primary dark:text-secondary">
-          Portfolio
+          Home
         </NavLink>
 
         {/* Mobile menu button */}

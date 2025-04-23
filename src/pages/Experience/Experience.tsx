@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 
-import { experiences, futureRole, publications } from './data';
+import { experiences, futureRole } from './data';
 
 const Experience = () => {
   return (
@@ -51,7 +51,7 @@ const Experience = () => {
                   <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
                     {exp.topics.map((topic, index) => (
                       <div key={index}>
-                        <h3 className="text-xl font-bold text-primary mb-1">{topic.title}</h3>
+                        <h3 className="text-xl font-bold text-primary mb-1 mt-3">{topic.title}</h3>
                         <div className="space-y-2 mb-4">
                           {topic.descriptions.map((item, i) => (
                             <p key={i} className="text-gray-600 text-sm flex items-start">
@@ -178,50 +178,50 @@ const Experience = () => {
           </div>
         </div>
 
-        <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-8">
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.8, duration: 0.6 }}
-            className="bg-white rounded-lg shadow-md p-6"
-          >
-            <h2 className="text-2xl font-bold text-primary mb-6">Key Academic Publications</h2>
-            <div className="space-y-4">
-              {publications.map((pub, index) => (
-                <div key={index} className="pb-4 border-b border-gray-100 last:border-0">
-                  <h3 className="text-lg font-semibold text-gray-800 mb-1">{pub.title}</h3>
-                  <p className="text-gray-600 text-sm mb-1">{pub.journal}</p>
-                  <p className="text-gray-600 text-sm mb-1">{pub.coauthors}</p>
-                  <p className="text-gray-500 text-sm">{pub.year}</p>
-                </div>
-              ))}
-            </div>
-          </motion.div>
+        {/*<div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-8">*/}
+        {/*  <motion.div*/}
+        {/*    initial={{ opacity: 0, x: -30 }}*/}
+        {/*    animate={{ opacity: 1, x: 0 }}*/}
+        {/*    transition={{ delay: 0.8, duration: 0.6 }}*/}
+        {/*    className="bg-white rounded-lg shadow-md p-6"*/}
+        {/*  >*/}
+        {/*    <h2 className="text-2xl font-bold text-primary mb-6">Key Academic Publications</h2>*/}
+        {/*    <div className="space-y-4">*/}
+        {/*      {publications.map((pub, index) => (*/}
+        {/*        <div key={index} className="pb-4 border-b border-gray-100 last:border-0">*/}
+        {/*          <h3 className="text-lg font-semibold text-gray-800 mb-1">{pub.title}</h3>*/}
+        {/*          <p className="text-gray-600 text-sm mb-1">{pub.journal}</p>*/}
+        {/*          <p className="text-gray-600 text-sm mb-1">{pub.coauthors}</p>*/}
+        {/*          <p className="text-gray-500 text-sm">{pub.year}</p>*/}
+        {/*        </div>*/}
+        {/*      ))}*/}
+        {/*    </div>*/}
+        {/*  </motion.div>*/}
 
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.8, duration: 0.6 }}
-            className="bg-white rounded-lg shadow-md p-6"
-          >
-            <h2 className="text-2xl font-bold text-primary mb-6">Career Trajectory</h2>
-            <p className="text-gray-700 mb-4">
-              Dr. Banerjee has crafted a unique career path that spans academic research,
-              quantitative finance, and blockchain technology. His journey demonstrates how rigorous
-              mathematical training can be applied to emerging financial technologies.
-            </p>
-            <p className="text-gray-700 mb-4">
-              From his early work in fluid dynamics at MIT to his current role developing economic
-              models for Bitcoin staking, Dr. Banerjee has consistently worked at the intersection
-              of complex systems and practical applications.
-            </p>
-            <p className="text-gray-700">
-              Throughout his career, Dr. Banerjee has maintained connections to the academic
-              community while bringing research-grade rigor to industry applications in finance and
-              blockchain technology.
-            </p>
-          </motion.div>
-        </div>
+        {/*  <motion.div*/}
+        {/*    initial={{ opacity: 0, x: 30 }}*/}
+        {/*    animate={{ opacity: 1, x: 0 }}*/}
+        {/*    transition={{ delay: 0.8, duration: 0.6 }}*/}
+        {/*    className="bg-white rounded-lg shadow-md p-6"*/}
+        {/*  >*/}
+        {/*    <h2 className="text-2xl font-bold text-primary mb-6">Career Trajectory</h2>*/}
+        {/*    <p className="text-gray-700 mb-4">*/}
+        {/*      Dr. Banerjee has crafted a unique career path that spans academic research,*/}
+        {/*      quantitative finance, and blockchain technology. His journey demonstrates how rigorous*/}
+        {/*      mathematical training can be applied to emerging financial technologies.*/}
+        {/*    </p>*/}
+        {/*    <p className="text-gray-700 mb-4">*/}
+        {/*      From his early work in fluid dynamics at MIT to his current role developing economic*/}
+        {/*      models for Bitcoin staking, Dr. Banerjee has consistently worked at the intersection*/}
+        {/*      of complex systems and practical applications.*/}
+        {/*    </p>*/}
+        {/*    <p className="text-gray-700">*/}
+        {/*      Throughout his career, Dr. Banerjee has maintained connections to the academic*/}
+        {/*      community while bringing research-grade rigor to industry applications in finance and*/}
+        {/*      blockchain technology.*/}
+        {/*    </p>*/}
+        {/*  </motion.div>*/}
+        {/*</div>*/}
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}

@@ -1,181 +1,215 @@
 import { motion } from 'framer-motion';
+import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 
+import { symbols } from './data';
+
 const Home = () => {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  // const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const particles: {
+      x: number;
+      y: number;
+      size: number;
+      speedX: number;
+      speedY: number;
+      color: string;
+      alpha: number;
+      symbol: string;
+      rotation: number;
+      rotationSpeed: number;
+    }[] = [];
+
+    for (let i = 0; i < 100; i++) {
+      particles.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        size: Math.random() * 16 + 12,
+        speedX: Math.random() * 1 - 0.5,
+        speedY: Math.random() * 1 - 0.5,
+        color: `hsl(${Math.random() * 60 + 200}, 40%, 20%)`,
+        alpha: Math.random() * 0.7 + 0.3,
+        symbol: symbols[Math.floor(Math.random() * symbols.length)],
+        rotation: Math.random() * Math.PI * 2,
+        rotationSpeed: Math.random() * 0.02 - 0.01,
+      });
+    }
+
+    let animationId: number;
+    const animate = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      for (let i = 0; i < particles.length; i++) {
+        const p = particles[i];
+
+        // Create connections
+        for (let j = i; j < particles.length; j++) {
+          const p2 = particles[j];
+          const distance = Math.sqrt(Math.pow(p.x - p2.x, 2) + Math.pow(p.y - p2.y, 2));
+
+          if (distance < 150) {
+            ctx.beginPath();
+            ctx.strokeStyle = `rgba(20, 20, 30, ${0.3 * (1 - distance / 150)})`;
+            ctx.lineWidth = 0.8;
+            ctx.moveTo(p.x, p.y);
+            ctx.lineTo(p2.x, p2.y);
+            ctx.stroke();
+          }
+        }
+
+        // Check mouse interaction
+        // const distToMouse = Math.sqrt(
+        //   Math.pow(p.x - mousePosition.x, 2) +
+        //   Math.pow(p.y - mousePosition.y, 2)
+        // );
+        //
+        // if (distToMouse < 150) {
+        //   const angle = Math.atan2(p.y - mousePosition.y, p.x - mousePosition.x);
+        //   p.x += Math.cos(angle) * 1;
+        //   p.y += Math.sin(angle) * 1;
+        // }
+
+        // Update position
+        p.x += p.speedX;
+        p.y += p.speedY;
+
+        // Update rotation
+        p.rotation += p.rotationSpeed;
+
+        // Boundary check
+        if (p.x < 0 || p.x > canvas.width) p.speedX *= -1;
+        if (p.y < 0 || p.y > canvas.height) p.speedY *= -1;
+
+        // Draw the symbol
+        ctx.save();
+        ctx.translate(p.x, p.y);
+        ctx.rotate(p.rotation);
+        ctx.font = `${p.size}px Arial`;
+        ctx.fillStyle = p.color.replace('hsl', 'hsla').slice(0, -1) + `, ${p.alpha})`;
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText(p.symbol, 0, 0);
+        ctx.restore();
+      }
+
+      animationId = requestAnimationFrame(animate);
+    };
+
+    animate();
+
+    const handleResize = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    };
+
+    // const handleMouseMove = (e: MouseEvent) => {
+    //   setMousePosition({ x: e.clientX, y: e.clientY });
+    // };
+
+    window.addEventListener('resize', handleResize);
+    // window.addEventListener('mousemove', handleMouseMove);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      // window.removeEventListener('mousemove', handleMouseMove);
+      cancelAnimationFrame(animationId);
+    };
+  }, []);
+
   return (
-    <div className="transition-colors duration-300">
-      <section className="bg-gradient-to-r from-primary to-secondary text-white py-20">
-        <div className="container">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-12">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              className="max-w-md"
-            >
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                Dr. Sankha Banerjee
-              </h1>
-              <p className="text-xl mb-8">
-                MIT-affiliated researcher | Finance & Blockchain Expert | Chief Protocol Economist
-                at Babylon
-              </p>
-              <Link
-                to="/about"
-                className="bg-white text-primary px-6 py-3 rounded-md font-medium hover:bg-opacity-90 transition-all duration-300 shadow-md hover:shadow-lg inline-block"
-              >
-                Learn More
-              </Link>
-            </motion.div>
+    <div className="h-screen relative overflow-hidden">
+      {/* Full screen image */}
+      <div className="absolute inset-0 z-0 bg-[#EBEFFA]">
+        <img
+          src="/src/assets/profile2.jpg"
+          alt="Dr. Sankha Banerjee"
+          className="w-full h-full object-contain"
+        />
+      </div>
 
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="w-full max-w-xs md:max-w-sm"
-            >
-              <div className="rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm p-2 shadow-xl">
-                <img
-                  src="/src/assets/profile.jpg"
-                  alt="Dr. Sankha Banerjee"
-                  className="w-full h-auto rounded-xl object-cover aspect-[3/4]"
-                />
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+      {/* Canvas for particle animation */}
+      <canvas ref={canvasRef} className="absolute inset-0 z-10 opacity-60" />
 
-      <section className="py-16 bg-gray-50 transition-colors duration-300">
-        <div className="container">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-primary mb-4">Professional Portfolio</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              {`From academic research in fluid dynamics to pioneering work in blockchain economics,
-              explore Dr. Banerjee's journey at the intersection of mathematics, finance and
-              technology`}
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <motion.div whileHover={{ y: -5 }} className="card animate-fade-in">
-              <div className="card-body">
-                <div className="text-primary mb-4">
-                  <svg className="w-10 h-10" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
-                    <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998a12.078 12.078 0 01.665-6.479L12 14z"></path>
-                    <path d="M12 14l-6.16-3.422a12.083 12.083 0 00-.665 6.479A11.952 11.952 0 0112 20.055a11.952 11.952 0 016.824-2.998a12.078 12.078 0 00-.665-6.479L12 14z"></path>
-                  </svg>
-                </div>
-                <h3 className="card-title">Academic Background</h3>
-                <p className="card-text mb-4">
-                  Ph.D. in Applied Mathematics from MIT with expertise in computational fluid
-                  dynamics and machine learning applications to non-linear systems.
-                </p>
-                <Link to="/about" className="text-secondary font-medium hover:underline">
-                  View Details &rarr;
-                </Link>
-              </div>
-            </motion.div>
-
-            <motion.div
-              whileHover={{ y: -5 }}
-              className="card animate-fade-in"
-              style={{ animationDelay: '0.2s' }}
-            >
-              <div className="card-body">
-                <div className="text-primary mb-4">
-                  <svg className="w-10 h-10" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path>
-                  </svg>
-                </div>
-                <h3 className="card-title">Research & Expertise</h3>
-                <p className="card-text mb-4">
-                  Specialized in blockchain economics, DeFi infrastructure, quantitative finance,
-                  and high-frequency trading systems with institutional-grade approaches.
-                </p>
-                <Link to="/research" className="text-secondary font-medium hover:underline">
-                  View Details &rarr;
-                </Link>
-              </div>
-            </motion.div>
-
-            <motion.div
-              whileHover={{ y: -5 }}
-              className="card animate-fade-in"
-              style={{ animationDelay: '0.4s' }}
-            >
-              <div className="card-body">
-                <div className="text-primary mb-4">
-                  <svg className="w-10 h-10" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M14 11h-4a1 1 0 00-1 1v7a1 1 0 001 1h4a1 1 0 001-1v-7a1 1 0 00-1-1zM7 5H6a2 2 0 00-2 2v.12l1.027.871a1.306 1.306 0 010 1.818L4 10.88V11h2a1 1 0 001-1V6a1 1 0 00-1-1z"></path>
-                    <path d="M18 5h-1a1 1 0 00-1 1v4a1 1 0 001 1h2v-.12l-1.027-.871a1.306 1.306 0 010-1.818L19 7.12V7a2 2 0 00-1-2z"></path>
-                    <path d="M13.5 17.5L14.5 16H14a1 1 0 01-1-1v-2.8l-2 2.4V15a1 1 0 01-1 1h-.5l1 1.5 1 1.5zM13.5 11.5L12 8l-1.5 3.5 1.5 1.5 1.5-1.5z"></path>
-                  </svg>
-                </div>
-                <h3 className="card-title">Career Evolution</h3>
-                <p className="card-text mb-4">
-                  Traced a unique path from MIT academic research to Wall Street quantitative
-                  finance to blockchain technology leadership at Thorchain and Babylon.
-                </p>
-                <Link to="/experience" className="text-secondary font-medium hover:underline">
-                  View Details &rarr;
-                </Link>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 bg-gray-50 transition-colors duration-300">
-        <div className="container">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-primary mb-4">Current Role</h2>
-            <p className="text-gray-600 max-w-3xl mx-auto">
-              {`As Chief Protocol Economist at Babylon Chain, Dr. Banerjee is working on innovative
-              economic models that leverage Bitcoin's security to bolster Proof-of-Stake networks,
-              allowing Bitcoin holders to stake their BTC and earn yields on partner networks.`}
-            </p>
-          </div>
-
-          <div
-            className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 max-w-3xl mx-auto animate-fade-in"
-            style={{ animationDelay: '0.3s' }}
+      {/* Content container */}
+      <div className="relative z-20 flex h-full items-center px-4">
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1.5 }}
+          className="max-w-xl py-8 px-10 rounded-3xl self-center ml-10 mt-0 md:mt-0"
+          style={{
+            background: 'transparent',
+          }}
+        >
+          <motion.div
+            className="relative"
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 2 }}
           >
-            <div className="flex flex-col md:flex-row gap-6 items-center">
-              <div className="md:w-1/3">
-                <img
-                  src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=80"
-                  alt="Bitcoin on networks"
-                  className="rounded-lg w-full h-auto shadow-sm"
-                />
-              </div>
-              <div className="md:w-2/3">
-                <h3 className="text-xl font-bold text-primary mb-3">Bitcoin Staking Innovation</h3>
-                <p className="text-gray-600 mb-4">
-                  {`Dr. Banerjee's work focuses on creating mechanisms that allow Bitcoin holders to
-                  earn higher yields (potentially 6–10% returns) by securing other blockchains,
-                  compared to the ~1% typical on traditional Bitcoin lending platforms.`}
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm transition-all duration-300">
-                    Bitcoin
-                  </span>
-                  <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm transition-all duration-300">
-                    DeFi
-                  </span>
-                  <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm transition-all duration-300">
-                    Staking
-                  </span>
-                  <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm transition-all duration-300">
-                    Blockchain
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+            {/* Decorative elements for the name */}
+            <div className="absolute -inset-4 rounded-xl bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-pink-500/10 blur-md" />
+
+            <motion.h1
+              className="text-4xl md:text-6xl font-bold text-left relative p-5 rounded-lg"
+              style={{
+                background:
+                  'linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(240,240,255,0.9) 100%)',
+                color: '#222',
+                boxShadow: '0 4px 6px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.08)',
+              }}
+            >
+              <span className="block mb-1">Dr. Sankha</span>
+              <span className="block">Banerjee</span>
+              <div className="h-1 w-32 bg-secondary mt-3 rounded-full"></div>
+            </motion.h1>
+          </motion.div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.5 }}
+          className="fixed bottom-16 right-16"
+        >
+          <Link to="/experience" className="relative inline-block group">
+            <motion.span
+              className="bg-secondary relative block px-8 py-4 rounded-lg font-bold text-lg transform group-hover:translate-y-[-3px] transition-all duration-300"
+              whileTap={{ scale: 0.95 }}
+              style={{
+                // background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%)',
+                color: 'white',
+                boxShadow: '0 4px 6px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.08)',
+              }}
+            >
+              Learn More
+            </motion.span>
+          </Link>
+        </motion.div>
+      </div>
+
+      {/* Add global CSS using style element */}
+      <style>{`
+        @keyframes shimmer {
+          0% {
+            transform: translateX(-100%);
+          }
+          100% {
+            transform: translateX(100%);
+          }
+        }
+      `}</style>
     </div>
   );
 };
