@@ -4,7 +4,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   const location = useLocation();
   const isHomePage = location.pathname === '/';
-  
+
   // Don't render footer on home page
   if (isHomePage) {
     return null;

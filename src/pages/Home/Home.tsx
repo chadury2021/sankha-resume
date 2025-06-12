@@ -12,7 +12,7 @@ const Home = () => {
     if (!canvas) return;
 
     const ctx = canvas.getContext('2d');
-    const padding = 10; // Reduced padding value
+    const padding = 0; // Reduced padding value
 
     if (!ctx) return;
 
@@ -124,12 +124,12 @@ const Home = () => {
         <img
           src="/src/assets/profile2.jpg"
           alt="Dr. Sankha Banerjee"
-          className="w-full h-full object-contain"
+          className="w-full h-full object-cover lg:object-contain"
         />
       </div>
 
       {/* Content container */}
-      <div className="relative z-30 flex h-full items-center px-4">
+      <div className="relative z-30 max-md:justify-center flex h-full items-end 2xl:items-center px-4">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
@@ -139,7 +139,7 @@ const Home = () => {
             stiffness: 100,
             damping: 15,
           }}
-          className="max-w-xl py-8 px-10 rounded-3xl self-center ml-10 mt-0 md:mt-0"
+          className="max-md:w-full max-w-xl py-8 rounded-3xl md:ml-10 mt-0 md:mt-0"
         >
           <motion.div
             className="relative"
