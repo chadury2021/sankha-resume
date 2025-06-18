@@ -10,6 +10,22 @@ const Experience = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
+          className="flex justify-center mb-8"
+        >
+          <a
+            href="/sankha_banerjee.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-primary px-6 py-3 rounded-md text-white font-semibold bg-primary hover:bg-primary/90 transition-colors shadow"
+          >
+            View Extended Resume
+          </a>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
         >
           <h1 className="section-title text-center">Professional Experience</h1>
           <p className="section-subtitle text-center text-balance">
@@ -222,20 +238,6 @@ const Experience = () => {
         {/*    </p>*/}
         {/*  </motion.div>*/}
         {/*</div>*/}
-
-        {/*<motion.div*/}
-        {/*  initial={{ opacity: 0, y: 30 }}*/}
-        {/*  animate={{ opacity: 1, y: 0 }}*/}
-        {/*  transition={{ delay: 1, duration: 0.6 }}*/}
-        {/*  className="mt-16 text-center"*/}
-        {/*>*/}
-        {/*  <a*/}
-        {/*    href="#"*/}
-        {/*    className="inline-block bg-primary hover:bg-primary/90 text-white font-medium px-6 py-3 rounded-lg transition-colors"*/}
-        {/*  >*/}
-        {/*    View Extended Resume*/}
-        {/*  </a>*/}
-        {/*</motion.div>*/}
       </div>
     </div>
   );
