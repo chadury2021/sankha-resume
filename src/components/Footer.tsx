@@ -39,7 +39,7 @@ const Footer = () => {
                   to="/achievements"
                   className="text-gray-300 hover:text-white transition-colors"
                 >
-                  Talks
+                  Achievements
                 </Link>
               </li>
               <li>
