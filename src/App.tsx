@@ -8,6 +8,7 @@ import Experience from './pages/Experience';
 import ExternalProfiles from './pages/ExternalProfiles';
 import Home from './pages/Home';
 import ResearchInterests from './pages/ResearchInterests';
+import Talks from './pages/Talks';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Route path="/" element={<MainLayout />}>
         <Route index element={<Home />} />
         <Route path="about" element={<About />} />
+        <Route path="talks" element={<Talks />} />
         <Route path="research" element={<ResearchInterests />} />
         <Route path="courses" element={<Courses />} />
         <Route path="external-profiles" element={<ExternalProfiles />} />

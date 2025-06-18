@@ -39,7 +39,7 @@ export const profiles = [
     ),
     description:
       'Professional resume including his industry experience in finance and blockchain (MIT Sloan and MIT alum).',
-    link: 'https://www.linkedin.com/in/sankha-banerjee-3850235',
+    link: 'https://www.linkedin.com/in/sankha-banerjee-8a04419',
   },
   {
     name: 'Twitter/X',

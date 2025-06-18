@@ -30,6 +30,11 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
+                <Link to="/talks" className="text-gray-300 hover:text-white transition-colors">
+                  Talks
+                </Link>
+              </li>
+              <li>
                 <Link to="/research" className="text-gray-300 hover:text-white transition-colors">
                   Research Interests
                 </Link>
@@ -49,11 +54,15 @@ const Footer = () => {
 
           <div>
             <h3 className="text-xl font-bold mb-4">Contact</h3>
-            <p className="text-gray-300 mb-2">Email: Email of Sankha</p>
-            <p className="text-gray-300 mb-4">Location: Location of Sankha</p>
+            <a
+              href="mailto:sankha80@gmail.com"
+              className="text-gray-300 hover:text-white transition-colors mb-2 block"
+            >
+              sankha80@gmail.com
+            </a>
             <div className="flex space-x-4">
               <a
-                href="https://www.linkedin.com/in/sankha-banerjee-3850235"
+                href="https://www.linkedin.com/in/sankha-banerjee-8a04419"
                 className="text-gray-300 hover:text-white transition-colors"
                 rel="noreferrer"
                 target="_blank"
