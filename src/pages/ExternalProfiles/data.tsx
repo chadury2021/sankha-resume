@@ -42,6 +42,34 @@ export const profiles = [
     link: 'https://www.linkedin.com/in/sankha-banerjee-8a04419',
   },
   {
+    name: 'Medium',
+    icon: (
+      <svg className="w-10 h-10" viewBox="0 0 1043.63 592.71" fill="currentColor">
+        <g>
+          <path d="M588.67 296.14c0 163.57-131.7 296.14-294.33 296.14C131.7 592.28 0 459.71 0 296.14 0 132.57 131.7 0 294.34 0c162.63 0 294.33 132.57 294.33 296.14zM841.26 296.14c0 151.31-65.47 274.01-146.22 274.01-80.75 0-146.22-122.7-146.22-274.01 0-151.31 65.47-274.01 146.22-274.01 80.75 0 146.22 122.7 146.22 274.01zM1043.63 296.14c0 140.13-29.29 253.77-65.42 253.77-36.13 0-65.42-113.64-65.42-253.77 0-140.13 29.29-253.77 65.42-253.77 36.13 0 65.42 113.64 65.42 253.77z" />
+        </g>
+      </svg>
+    ),
+    description:
+      'Long-form essays and technical articles on technology, finance, and research topics.',
+    link: 'https://medium.com/@sankha80',
+  },
+  {
+    name: 'Substack',
+    icon: (
+      <svg className="w-10 h-10" viewBox="0 0 40 40" fill="currentColor">
+        <g>
+          <rect x="5" y="7" width="30" height="4" rx="1" />
+          <rect x="5" y="15" width="30" height="4" rx="1" />
+          <rect x="5" y="23" width="30" height="10" rx="2" />
+        </g>
+      </svg>
+    ),
+    description:
+      'Newsletter platform for regular updates, insights, and commentary on current research and industry trends.',
+    link: 'https://substack.com/@sankhabanerjee',
+  },
+  {
     name: 'Twitter/X',
     icon: (
       <svg className="w-10 h-10" viewBox="0 0 24 24" fill="currentColor">
