@@ -57,12 +57,10 @@ export const profiles = [
   {
     name: 'Substack',
     icon: (
-      <svg className="w-10 h-10" viewBox="0 0 40 40" fill="currentColor">
-        <g>
-          <rect x="5" y="7" width="30" height="4" rx="1" />
-          <rect x="5" y="15" width="30" height="4" rx="1" />
-          <rect x="5" y="23" width="30" height="10" rx="2" />
-        </g>
+      <svg className="w-10 h-10" viewBox="0 0 21 24" fill="currentColor">
+        <path d="M20.9991 5.40625H0V8.24275H20.9991V5.40625Z" />
+        <path d="M0 10.8125V24.0004L10.4991 18.1107L21 24.0004V10.8125H0Z" />
+        <path d="M20.9991 0H0V2.83603H20.9991V0Z" />
       </svg>
     ),
     description:
