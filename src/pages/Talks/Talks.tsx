@@ -67,7 +67,6 @@ const Talks = () => {
   };
 
   const handleKeyPress = (event: KeyboardEvent, url: string) => {
-    console.log('heree');
     if (event.key === 'Enter' || event.key === ' ') {
       event.preventDefault();
       handleVideoClick(url);
@@ -76,17 +75,17 @@ const Talks = () => {
 
   return (
     <div className="py-12">
-      <div className="container px-4">
+      <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
           <h1 className="section-title text-center">Talks</h1>
-          <p className="section-subtitle text-center">Explore my presentations and discussions.</p>
+          <p className="section-subtitle text-center">Explore presentations and discussions</p>
         </motion.div>
 
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {talks.map((talk, index) => (
             <motion.div
               key={talk.id}

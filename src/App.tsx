@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import MainLayout from './layouts/MainLayout';
 // Pages
 import About from './pages/About';
+import Achievements from './pages/Achievements';
 import Courses from './pages/Courses';
 import Experience from './pages/Experience';
 import ExternalProfiles from './pages/ExternalProfiles';
@@ -17,6 +18,7 @@ function App() {
         <Route index element={<Home />} />
         <Route path="about" element={<About />} />
         <Route path="talks" element={<Talks />} />
+        <Route path="achievements" element={<Achievements />} />
         <Route path="research" element={<ResearchInterests />} />
         <Route path="courses" element={<Courses />} />
         <Route path="external-profiles" element={<ExternalProfiles />} />

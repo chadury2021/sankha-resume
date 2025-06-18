@@ -5,7 +5,7 @@ import { experiences, futureRole } from './data';
 const Experience = () => {
   return (
     <div className="py-12">
-      <div className="container px-4">
+      <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -19,7 +19,7 @@ const Experience = () => {
         </motion.div>
 
         {/* Timeline for medium-large screens */}
-        <div className="mt-12 max-w-5xl mx-auto hidden md:block">
+        <div className="max-w-5xl mx-auto hidden md:block">
           <div className="relative">
             {/* Timeline center line */}
             <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-primary/20"></div>
@@ -223,19 +223,19 @@ const Experience = () => {
         {/*  </motion.div>*/}
         {/*</div>*/}
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1, duration: 0.6 }}
-          className="mt-16 text-center"
-        >
-          <a
-            href="#"
-            className="inline-block bg-primary hover:bg-primary/90 text-white font-medium px-6 py-3 rounded-lg transition-colors"
-          >
-            View Extended Resume
-          </a>
-        </motion.div>
+        {/*<motion.div*/}
+        {/*  initial={{ opacity: 0, y: 30 }}*/}
+        {/*  animate={{ opacity: 1, y: 0 }}*/}
+        {/*  transition={{ delay: 1, duration: 0.6 }}*/}
+        {/*  className="mt-16 text-center"*/}
+        {/*>*/}
+        {/*  <a*/}
+        {/*    href="#"*/}
+        {/*    className="inline-block bg-primary hover:bg-primary/90 text-white font-medium px-6 py-3 rounded-lg transition-colors"*/}
+        {/*  >*/}
+        {/*    View Extended Resume*/}
+        {/*  </a>*/}
+        {/*</motion.div>*/}
       </div>
     </div>
   );

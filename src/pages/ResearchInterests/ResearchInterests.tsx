@@ -18,7 +18,7 @@ const ResearchInterests = () => {
         </motion.div>
 
         <motion.div
-          className="mt-12 bg-white rounded-lg shadow-sm p-6"
+          className=" bg-white rounded-lg shadow-sm p-6"
           variants={{
             hidden: { opacity: 0 },
             show: {
