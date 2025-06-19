@@ -122,7 +122,7 @@ const Home = () => {
         <div className="-z-10 left-0 top-0 absolute w-1/2 h-full bg-gradient-to-b from-[#E6E6E6] to-[#EAEAEA]" />
         <div className="-z-10 right-0 top-0 absolute w-1/2 h-full bg-gradient-to-b from-[#E9E9E9] to-[#EBEBEB]" />
         <img
-          src="/src/assets/profile2.jpg"
+          src="src/assets/profile2.jpg"
           alt="Dr. Sankha Banerjee"
           className="w-full h-full object-cover lg:object-contain"
         />
