@@ -47,11 +47,11 @@ const Footer = () => {
                   Research Interests
                 </Link>
               </li>
-              <li>
-                <Link to="/courses" className="text-gray-300 hover:text-white transition-colors">
-                  Courses
-                </Link>
-              </li>
+              {/*<li>*/}
+              {/*  <Link to="/courses" className="text-gray-300 hover:text-white transition-colors">*/}
+              {/*    Courses*/}
+              {/*  </Link>*/}
+              {/*</li>*/}
               <li>
                 <Link to="/experience" className="text-gray-300 hover:text-white transition-colors">
                   Experience

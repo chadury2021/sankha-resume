@@ -20,7 +20,7 @@ const Navbar = () => {
     { path: '/talks', name: 'Talks' },
     { path: '/achievements', name: 'Achievements' },
     { path: '/research', name: 'Research Interests' },
-    { path: '/courses', name: 'Courses' },
+    // { path: '/courses', name: 'Courses' },
     { path: '/external-profiles', name: 'External Profiles' },
     { path: '/experience', name: 'Experience' },
   ];
