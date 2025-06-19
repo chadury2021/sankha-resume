@@ -34,7 +34,7 @@ const Navbar = () => {
 
         {/* Mobile menu button */}
         <button
-          className="md:hidden text-gray-700 dark:text-gray-200"
+          className="lg:hidden text-gray-700 dark:text-gray-200"
           onClick={toggleMenu}
           aria-label="Toggle menu"
         >
@@ -52,7 +52,7 @@ const Navbar = () => {
         </button>
 
         {/* Desktop menu */}
-        <div className="hidden md:flex space-x-6">
+        <div className="hidden lg:flex space-x-6">
           {links.map(link => (
             <NavLink
               key={link.path}
@@ -73,7 +73,7 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       {isMenuOpen && (
-        <div className="md:hidden px-4 py-3 bg-white border-t dark:bg-gray-800 dark:border-gray-700">
+        <div className="lg:hidden px-4 py-3 bg-white border-t dark:bg-gray-800 dark:border-gray-700">
           <div className="flex flex-col space-y-3">
             {links.map(link => (
               <NavLink
