@@ -19,7 +19,7 @@ const About = () => {
               <div className="md:shrink-0 md:w-1/3">
                 <img
                   className="h-48 w-full object-cover md:h-full"
-                  src="src/assets/profile3.jpg"
+                  src="/profile3.jpg"
                   alt="Profile"
                 />
               </div>
