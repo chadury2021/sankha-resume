@@ -23,7 +23,7 @@ const Talks = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h1 className="section-title text-center">Talks</h1>
+          <h1 className="section-title text-center">Talks & Media</h1>
           <p className="section-subtitle text-center">Explore presentations and discussions</p>
         </motion.div>
 

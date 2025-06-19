@@ -17,7 +17,7 @@ const Navbar = () => {
 
   const links = [
     { path: '/about', name: 'About' },
-    { path: '/talks', name: 'Talks' },
+    { path: '/talks', name: 'Talks & Media' },
     { path: '/achievements', name: 'Achievements' },
     { path: '/research', name: 'Research Interests' },
     // { path: '/courses', name: 'Courses' },

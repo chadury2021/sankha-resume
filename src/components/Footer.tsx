@@ -31,7 +31,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link to="/talks" className="text-gray-300 hover:text-white transition-colors">
-                  Talks
+                  Talks & Media
                 </Link>
               </li>
               <li>
