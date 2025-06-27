@@ -33,8 +33,8 @@ const Sidebar = ({ open, setOpen }: SidebarProps) => {
 
   return (
     <aside
-      className={`bg-white lg:top-10 flex flex-col h-full w-52 max-w-full fixed left-0 top-0 lg:sticky z-40 transition-transform duration-300 lg:translate-x-0
-        ${open ? 'translate-x-0' : '-translate-x-full'}
+      className={` max-lg:p-5 bg-white lg:top-10 flex flex-col h-full w-52 max-w-full fixed right-0 top-0 lg:sticky z-40 transition-transform duration-300 lg:translate-x-0
+        ${open ? 'translate-x-0' : 'translate-x-full'}
         lg:translate-x-0`}
     >
       {/* Profile Section */}
@@ -42,7 +42,7 @@ const Sidebar = ({ open, setOpen }: SidebarProps) => {
         <img
           src="/profile.png"
           alt="Sankha Banerjee"
-          className="w-28 h-28 rounded-2xl object-cover mb-6 shadow-md"
+          className="w-28 h-28 rounded-2xl object-cover mb-6 max-lg:w-10 max-lg:h-10"
         />
         <h1 className="title mb-1 text-xl">Sankha Banerjee</h1>
         <span className="mb-1">MIT-affiliated researcher</span>
