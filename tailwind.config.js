@@ -34,7 +34,8 @@ export default {
           "Meiryo",
           "sans-serif"
         ],
-        copernicus: ['"Copernicus"', "serif"],
+        ethosNova: ['"EthosNova"', "serif"],
+        shuriken: ['"TheLastShuriken"', "serif"],
       },
     },
   },

@@ -1,52 +1,66 @@
 /* Import Japanese fonts from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;500;700&family=M+PLUS+Rounded+1c:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap');
 
-/* Copernicus font */
+/* Ethos Nova font */
 @font-face {
-  font-family: 'Copernicus';
-  src: url('fonts/CopernicusTrial/CopernicusTrial-Book.ttf') format('truetype');
+  font-family: 'EthosNova';
+  src: url('fonts/EthosNova/EthosNova-Regular.woff2') format('woff2'),
+       url('fonts/EthosNova/EthosNova-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Copernicus';
-  src: url('fonts/CopernicusTrial/CopernicusTrial-BookItalic.ttf') format('truetype');
+  font-family: 'EthosNova';
+  src: url('fonts/EthosNova/EthosNova-Italic.woff2') format('woff2'),
+       url('fonts/EthosNova/EthosNova-Italic.woff') format('woff');
   font-weight: normal;
   font-style: italic;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Copernicus';
-  src: url('fonts/CopernicusTrial/CopernicusTrial-Medium.ttf') format('truetype');
+  font-family: 'EthosNova';
+  src: url('fonts/EthosNova/EthosNova-Medium.woff2') format('woff2'),
+       url('fonts/EthosNova/EthosNova-Medium.woff') format('woff');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Copernicus';
-  src: url('fonts/CopernicusTrial/CopernicusTrial-MediumItalic.ttf') format('truetype');
+  font-family: 'EthosNova';
+  src: url('fonts/EthosNova/EthosNova-MediumItalic.woff2') format('woff2'),
+       url('fonts/EthosNova/EthosNova-MediumItalic.woff') format('woff');
   font-weight: 500;
   font-style: italic;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Copernicus';
-  src: url('fonts/CopernicusTrial/CopernicusTrial-Semibold.ttf') format('truetype');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Copernicus';
-  src: url('fonts/CopernicusTrial/CopernicusTrial-Bold.ttf') format('truetype');
+  font-family: 'EthosNova';
+  src: url('fonts/EthosNova/EthosNova-Bold.woff2') format('woff2'),
+       url('fonts/EthosNova/EthosNova-Bold.woff') format('woff');
   font-weight: 700;
   font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'EthosNova';
+  src: url('fonts/EthosNova/EthosNova-BoldItalic.woff2') format('woff2'),
+       url('fonts/EthosNova/EthosNova-BoldItalic.woff') format('woff');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* The Last Shuriken */
+
+@font-face {
+  font-family: 'TheLastShuriken';
+  src: url('fonts/TheLastShuriken/TheLastShuriken.ttf') format('truetype');
   font-display: swap;
 }
 
@@ -60,63 +74,65 @@
   }
 
   body {
-    @apply bg-gray-50 text-gray-900 font-copernicus transition-colors duration-300;
+    @apply bg-white text-[#606060] font-ethosNova transition-colors duration-300;
     font-feature-settings: "palt";
     letter-spacing: 0.01em;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    @apply transition-colors duration-300;
+    @apply transition-colors duration-300 text-[#1A1A1A];
   }
 
   a, button, svg, path {
     @apply transition-colors duration-300;
   }
+
+  p {
+    @apply text-[#606060];
+  }
+
+  .highlighted-text {
+    @apply text-[#17A0BF];
+  }
 }
 
 @layer components {
   .container {
-    @apply px-4 mx-auto max-w-7xl;
+    @apply px-4 mx-auto max-w-6xl;
   }
-  
-  .btn {
-    @apply px-4 py-2 rounded font-medium transition-all duration-300;
+
+  .title {
+    @apply text-[#1A1A1A] lowercase font-shuriken;
   }
-  
-  .btn-primary {
-    @apply bg-primary text-white hover:bg-primary/90;
+
+  .dark-text {
+    @apply text-[#1A1A1A];
   }
-  
-  .btn-secondary {
-    @apply bg-secondary text-white hover:bg-secondary/90;
-  }
-  
-  .section {
-    @apply py-12 md:py-20;
-  }
-  
+
   .section-title {
-    @apply text-3xl md:text-4xl font-bold mb-6 text-primary;
-  }
-  
-  .section-subtitle {
-    @apply text-xl font-medium mb-8 text-gray-600;
+    @apply text-sm mb-6 lowercase font-shuriken;
   }
 
-  .card {
-    @apply bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300;
+  .icon-box-wrapper {
+    @apply w-12 h-12 min-w-12;
+    border: 0.5px solid transparent;
+    border-radius: 0.5rem;
+    background:
+      /* inner */   linear-gradient(transparent, transparent) padding-box,
+      /* border */  linear-gradient(180deg, #959595 0%, #3D3D3D 100%) border-box;
+    overflow: hidden;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.15);
   }
 
-  .card-body {
-    @apply p-6;
+  .icon-box {
+    @apply w-full h-full flex items-center justify-center bg-[#0C1618];
   }
 
-  .card-title {
-    @apply text-xl font-bold text-primary mb-3;
-  }
-
-  .card-text {
-    @apply text-gray-600;
+  .dateTagDot {
+    width: 5px;
+    height: 5px;
+    background: linear-gradient(180deg, #04D9D9 0%, #17A0BF 100%);
+    border-radius: 50%;
   }
 
   /* Animation classes */
