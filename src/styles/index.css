@@ -153,4 +153,19 @@
     0% { transform: scale(0.9); opacity: 0; }
     100% { transform: scale(1); opacity: 1; }
   }
-} 
+}
+
+/* Sidebar scroll styles */
+aside::-webkit-scrollbar {
+  width: 6px; /* Set the desired width */
+  height: 6px; /* For horizontal scrollbars */
+}
+
+aside::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2); /* Thumb color */
+  border-radius: 4px;
+}
+
+aside::-webkit-scrollbar-track {
+  background: rgba(133, 133, 133, 0.1);
+}

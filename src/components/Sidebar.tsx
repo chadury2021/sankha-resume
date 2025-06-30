@@ -10,6 +10,7 @@ import { ReactComponent as ExternalIcon } from '../assets/Sidebar/external.svg';
 import { ReactComponent as ResearchIcon } from '../assets/Sidebar/research.svg';
 import { ReactComponent as TalksIcon } from '../assets/Sidebar/talks.svg';
 import { ReactComponent as WritingsIcon } from '../assets/Sidebar/writings.svg';
+import { ReactComponent as XMarkIcon } from '../assets/x-mark.svg';
 import { ReactComponent as XIcon } from '../assets/x.svg';
 
 const navLinks = [
@@ -33,20 +34,25 @@ const Sidebar = ({ open, setOpen }: SidebarProps) => {
 
   return (
     <aside
-      className={` max-lg:p-5 bg-white lg:top-10 flex flex-col h-full w-52 max-w-full fixed right-0 top-0 lg:sticky z-40 transition-transform duration-300 lg:translate-x-0
+      className={`lg:max-h-[calc(100vh-2.5rem)] overflow-y-auto max-lg:w-[309px] w-[216px] max-lg:p-5 bg-white lg:top-10 flex flex-col h-full max-w-full fixed right-0 top-0 lg:sticky z-40 transition-transform duration-300 lg:translate-x-0
         ${open ? 'translate-x-0' : 'translate-x-full'}
         lg:translate-x-0`}
     >
       {/* Profile Section */}
       <div className="flex flex-col items-start">
-        <img
-          src="/profile.png"
-          alt="Sankha Banerjee"
-          className="w-28 h-28 rounded-2xl object-cover mb-6 max-lg:w-10 max-lg:h-10"
-        />
-        <h1 className="title mb-1 text-xl">Sankha Banerjee</h1>
-        <span className="mb-1">MIT-affiliated researcher</span>
-        <span className="mb-4">Finance & Blockchain Expert</span>
+        <div className="flex items-center justify-between mb-6 w-full">
+          <img
+            src="/profile.png"
+            alt="Sankha Banerjee"
+            className="w-[100px] h-[100px] rounded-2xl max-lg:rounded-lg object-cover max-lg:w-10 max-lg:h-10"
+          />
+          <button className="lg:hidden" onClick={() => setOpen(false)} aria-label="Toggle sidebar">
+            <XMarkIcon />
+          </button>
+        </div>
+        <h1 className="title mb-2 text-xl tracking-normal">Sankha Banerjee</h1>
+        <span className="mb-2">MIT-affiliated researcher</span>
+        <span className="mb-6">Finance & Blockchain Expert</span>
         <p className="text-sm">
           My expertise centers around crafting sophisticated economic models, forging impactful
           strategic partnerships, and spearheading comprehensive go-to-market strategies for our
@@ -55,7 +61,7 @@ const Sidebar = ({ open, setOpen }: SidebarProps) => {
       </div>
 
       {/* Navigation */}
-      <nav className="flex-1 py-6">
+      <nav className="flex-1 py-6 lg:py-24">
         <ul className="space-y-3">
           {navLinks.map(link => (
             <li key={link.path}>
@@ -79,7 +85,7 @@ const Sidebar = ({ open, setOpen }: SidebarProps) => {
       </nav>
 
       {/* Social Links & Footer */}
-      <div className="mt-auto pb-8">
+      <div className="mt-auto lg:pb-8">
         <div className="flex space-x-5 mb-6">
           <a
             href="https://www.linkedin.com/in/sankha-banerjee-8a04419"
