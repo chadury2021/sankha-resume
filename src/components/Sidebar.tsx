@@ -56,7 +56,10 @@ const Sidebar = ({ open, setOpen }: SidebarProps) => {
           Built and ran $1B+ weekly trading & market‑making systems on BitMEX and Binance.
         </span>
         <p className="text-sm">
-          F Bridged Citadel‑level quantitative finance with DeFi, designing Bitcoin staking
+          • Built and ran $1B+ weekly trading & market‑making systems on BitMEX and Binance.
+        </p>
+        <p className="text-sm">
+          • Bridged Citadel‑level quantitative finance with DeFi, designing Bitcoin staking
           (Babylon) and cross‑chain liquidity models at Thorchain. Currently heading research at
           Lombard.
         </p>
