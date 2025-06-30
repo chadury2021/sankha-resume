@@ -236,7 +236,7 @@ const Home = () => {
                   </svg>
 
                   <span className="text-lg font-medium bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                    Explore Complete Portfolio
+                    AI & Crypto Systems Architect
                   </span>
                 </motion.div>
               </Link>
