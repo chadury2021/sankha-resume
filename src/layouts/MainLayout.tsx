@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
 
 import Header from '../components/Header';
@@ -11,6 +11,18 @@ const MainLayout = () => {
 
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
+  useEffect(() => {
+    if (sidebarOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [sidebarOpen]);
+
   return (
     <div className="min-h-screen">
       {/* Hamburger for mobile */}
@@ -22,7 +34,12 @@ const MainLayout = () => {
         })}
       >
         {!isHomePage && <Sidebar open={sidebarOpen} setOpen={setSidebarOpen} />}
-        <main className={cn('flex-1', { 'pb-6 lg:pb-10': !isHomePage, 'blur-sm': sidebarOpen })}>
+        <main
+          className={cn('flex-1', {
+            'pb-6 lg:pb-10': !isHomePage,
+            'blur-sm pointer-events-none': sidebarOpen,
+          })}
+        >
           <Outlet />
         </main>
       </div>
