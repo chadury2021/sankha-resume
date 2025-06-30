@@ -19,9 +19,12 @@ const Home = () => {
         </h1>
         <p className="mb-3">Crypto‑economic architect and Engineering leader who:</p>
         <p className="mb-3 text-sm">
-          Designed cross‑chain liquidity models at Thorchain and Bitcoin staking economics at
+          Built and ran $1B+ weekly trading & market‑making systems on BitMEX and Binance.
         </p>
-        <p className="mb-8 text-sm">Babylon . Currently heading protocol research at Lombard.</p>
+        <p className="mb-8 text-sm">
+          Bridged Citadel‑level quantitative finance with DeFi, designing Bitcoin staking (Babylon)
+          and cross‑chain liquidity models at Thorchain. Currently heading research at Lombard.
+        </p>
         <Link
           to="/experience"
           className="text-sm font-medium inline-flex items-center h-9 px-3 rounded-lg text-white bg-gradient-to-b from-[#04D9D9] to-[#17A0BF]"
