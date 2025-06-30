@@ -34,12 +34,12 @@ const Sidebar = ({ open, setOpen }: SidebarProps) => {
 
   return (
     <aside
-      className={`h-full lg:h-[calc(100vh-2.5rem)] overflow-y-auto max-lg:w-[309px] lg:w-[216px] 2xl:w-[226px] max-lg:p-5 bg-white flex flex-col max-w-full fixed right-0 top-0 lg:sticky lg:top-10 z-40 transition-transform duration-300 lg:translate-x-0
+      className={`h-full lg:h-[calc(100vh-2.5rem)] overflow-y-auto max-lg:w-[309px] lg:w-[216px] max-lg:p-5 bg-white flex flex-col max-w-full fixed right-0 top-0 lg:sticky lg:top-10 z-40 transition-transform duration-300 lg:translate-x-0
         ${open ? 'translate-x-0' : 'translate-x-full'}
         lg:translate-x-0`}
     >
       {/* Profile Section */}
-      <div className="flex flex-col items-start">
+      <div className="flex flex-col items-start leading-none">
         <div className="flex items-center justify-between mb-6 w-full">
           <img
             src="/profile.png"
@@ -51,12 +51,14 @@ const Sidebar = ({ open, setOpen }: SidebarProps) => {
           </button>
         </div>
         <h1 className="title mb-2 text-xl tracking-normal">Sankha Banerjee</h1>
-        <span className="mb-2">MIT-affiliated researcher</span>
-        <span className="mb-6">Finance & Blockchain Expert</span>
+        <span className="mb-4">Crypto‑economic architect and engineering leader who:</span>
+        <span className="mb-4 text-sm">
+          Built and ran $1B+ weekly trading & market‑making systems on BitMEX and Binance.
+        </span>
         <p className="text-sm">
-          My expertise centers around crafting sophisticated economic models, forging impactful
-          strategic partnerships, and spearheading comprehensive go-to-market strategies for our
-          diverse array of products.
+          F Bridged Citadel‑level quantitative finance with DeFi, designing Bitcoin staking
+          (Babylon) and cross‑chain liquidity models at Thorchain. Currently heading research at
+          Lombard.
         </p>
       </div>
 

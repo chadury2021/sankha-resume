@@ -33,7 +33,7 @@ const Achievements = () => {
         animate="show"
         transition={{ duration: 0.5 }}
       >
-        <p className="mb-8">
+        <p className="mb-8 text-sm">
           Dr. Banerjee’s barycentric map has become NASA’s Rosetta Stone for turbulence
           anisotropy—translating raw Reynolds stresses into a language equally legible to
           physicists, CFD code developers, and machine-learning algorithms.
