@@ -34,7 +34,7 @@ const Sidebar = ({ open, setOpen }: SidebarProps) => {
 
   return (
     <aside
-      className={`h-full lg:h-[calc(100vh-2.5rem)] overflow-y-auto max-lg:w-[309px] 2x:w-[216px] max-lg:p-5 bg-white flex flex-col max-w-full fixed right-0 top-0 lg:sticky lg:top-10 z-40 transition-transform duration-300 lg:translate-x-0
+      className={`h-full lg:h-[calc(100vh-2.5rem)] overflow-y-auto max-lg:w-[309px] lg:w-[216px] 2xl:w-[226px] max-lg:p-5 bg-white flex flex-col max-w-full fixed right-0 top-0 lg:sticky lg:top-10 z-40 transition-transform duration-300 lg:translate-x-0
         ${open ? 'translate-x-0' : 'translate-x-full'}
         lg:translate-x-0`}
     >

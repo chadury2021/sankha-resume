@@ -16,7 +16,7 @@ const MainLayout = () => {
       {/* Hamburger for mobile */}
       <Header open={sidebarOpen} setOpen={setSidebarOpen} />
       {/* Centered container for sidebar + content */}
-      <div className={!isHomePage ? 'container pt-6 lg:pt-10 w-full flex gap-x-14 h-full' : ''}>
+      <div className={cn({ 'container pt-6 lg:pt-10 w-full flex gap-x-20 h-full': !isHomePage })}>
         {!isHomePage && <Sidebar open={sidebarOpen} setOpen={setSidebarOpen} />}
         <main className={cn('flex-1 pb-6 lg:pb-10', { 'blur-sm': sidebarOpen })}>
           <Outlet />
