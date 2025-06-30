@@ -1,34 +1,23 @@
 import AchievementsLink from './components/AchievementsLink';
-import { ReactComponent as BuildingIcon } from '../../assets/building-library.svg';
-import { ReactComponent as ChartBarIcon } from '../../assets/chart-bar.svg';
-import { ReactComponent as CodeBracketLineIcon } from '../../assets/code-bracket-square.svg';
-import { ReactComponent as LinkIcon } from '../../assets/link.svg';
-import { ReactComponent as ChartLineIcon } from '../../assets/presentation-chart-line.svg';
-import { ReactComponent as ScaleIcon } from '../../assets/scale.svg';
-import { ReactComponent as ShieldExclamationIcon } from '../../assets/shield-exclamation.svg';
 
 export const whyTheMapEnduresData = [
   {
     title: 'Physics-Respecting',
     description: 'Embeds realizability by construction.',
-    Icon: <ScaleIcon />,
+  },
+  {
+    title: 'Mesh-Independent',
+    description: 'Needs only local Reynolds-stress tensors; no wall-distance or grid data.',
   },
   {
     title: 'ML-Ready',
     description:
       'Converts a 3×3 tensor into a compact, interpretable 3-tuple—ideal for training data-efficient models.',
-    Icon: <ChartBarIcon />,
-  },
-  {
-    title: 'Mesh-Independent',
-    description: 'Needs only local Reynolds-stress tensors; no wall-distance or grid data.',
-    Icon: <LinkIcon />,
   },
   {
     title: 'Agency-Wide Adoption',
     description:
       'Now appears in AIAA CFD workshops, NASA Technical Reports, and Langley’s on-line documentation, signalling methodological standardisation.',
-    Icon: <BuildingIcon />,
   },
 ];
 
@@ -39,10 +28,8 @@ export const nutshellBarycentricMapTableConfig = {
       element: 'Origin',
       keyPoints: (
         <span>
-          Proposed by{' '}
-          <span className="highlighted-text">Banerjee, Krahl, Durst & Zenger (2007)</span> as a
-          transformation of the classical Lumley invariant triangle to{' '}
-          <span className="highlighted-text">barycentric (simplex) coordinates</span>. (
+          Proposed by <b>Banerjee, Krahl, Durst & Zenger (2007)</b> as a transformation of the
+          classical Lumley invariant triangle to <b>barycentric (simplex) coordinates</b>. (
           <AchievementsLink
             url="https://www.annualreviews.org/content/journals/10.1146/annurev-fluid-010518-040547"
             title="annualreviews.org"
@@ -57,12 +44,9 @@ export const nutshellBarycentricMapTableConfig = {
       element: 'Physical Intuition',
       keyPoints: (
         <span>
-          Vertices correspond to the three limiting turbulence states—
-          <span className="highlighted-text">1-component</span>,
-          <span className="highlighted-text">2-component</span>, and{' '}
-          <span className="highlighted-text">3-component (isotropic)</span> flow. Distances within
-          the triangle have a <span className="highlighted-text">metric meaning</span> (degree &
-          type of anisotropy).
+          Vertices correspond to the three limiting turbulence states—<b>1-component</b>,
+          <b>2-component</b>, and <b>3-component (isotropic)</b> flow. Distances within the triangle
+          have a <b>metric meaning</b> (degree & type of anisotropy).
         </span>
       ),
       whyItMatters:
@@ -72,9 +56,8 @@ export const nutshellBarycentricMapTableConfig = {
       element: 'Analytical Leverage',
       keyPoints: (
         <span>
-          Provides an{' '}
-          <span className="highlighted-text">orthonormal basis for eigen-perturbations</span>;
-          facilitates realizability-preserving tensor perturbations and machine-learning features.
+          Provides an <b>orthonormal basis for eigen-perturbations</b>; facilitates
+          realizability-preserving tensor perturbations and machine-learning features.
         </span>
       ),
       whyItMatters:
@@ -97,15 +80,13 @@ export const howDuraisamyData = [
         )
       </span>
     ),
-    Icon: <ShieldExclamationIcon />,
   },
   {
     title: 'Statistical Inference & UQ',
     description: (
       <span>
-        The review points to the{' '}
-        <span className="highlighted-text">Eigenspace-Perturbation Method</span> of Iaccarino,
-        Mishra & Ghili (2017), which is formulated directly in barycentric space. (
+        The review points to the <b>Eigenspace-Perturbation Method</b> of Iaccarino, Mishra & Ghili
+        (2017), which is formulated directly in barycentric space. (
         <AchievementsLink
           url="https://www.annualreviews.org/content/journals/10.1146/annurev-fluid-010518-040547"
           title="annualreviews.org"
@@ -113,7 +94,6 @@ export const howDuraisamyData = [
         )
       </span>
     ),
-    Icon: <ChartLineIcon />,
   },
   {
     title: 'Machine-Learning Features',
@@ -128,7 +108,6 @@ export const howDuraisamyData = [
         )
       </span>
     ),
-    Icon: <CodeBracketLineIcon />,
   },
 ];
 
