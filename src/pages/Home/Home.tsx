@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
-    <div className="flex items-center justify-between h-screen relative overflow-hidden">
+    <div className="max-lg:pt-20 max-lg:gap-y-8 flex flex-col items-start justify-between h-screen relative overflow-hidden lg:flex-row lg:items-center">
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
@@ -11,14 +11,17 @@ const Home = () => {
           duration: 0.9,
           ease: [0.33, 1, 0.68, 1],
         }}
-        className="w-min pl-20"
+        className="lg:w-min px-6 lg:pr-0 lg:pl-20 max-lg:leading-none"
       >
-        <h1 className="font-shuriken text-[2.5rem] mb-6 whitespace-nowrap">DR. sankha banerjee</h1>
+        <h1 className="font-shuriken text-2xl lg:text-[2.5rem] mb-6 whitespace-nowrap lg:pl-0 lg:pr-32 2xl:px-0">
+          DR. sankha <br className="max-lg:hidden 2xl:hidden" />
+          banerjee
+        </h1>
         <p className="mb-3">Crypto‑economic architect and engineering leader who:</p>
-        <p className="mb-3">
+        <p className="mb-3 text-sm">
           Built and ran $1B+ weekly trading & market‑making systems on BitMEX and Binance.
         </p>
-        <p className="mb-8">
+        <p className="mb-8 text-sm">
           Bridged Citadel‑level quantitative finance with DeFi, designing Bitcoin staking (Babylon)
           and cross‑chain liquidity models at Thorchain. Currently heading research at Lombard.
         </p>
@@ -31,7 +34,7 @@ const Home = () => {
       </motion.div>
 
       <img
-        className="h-full object-cover w-[600px]"
+        className="h-full object-cover 2xl:w-[600px] lg:w-[480px]"
         src="/profile2.png"
         alt="Dr. Sankha Banerjee"
       />
