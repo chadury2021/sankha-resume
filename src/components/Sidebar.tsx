@@ -51,10 +51,7 @@ const Sidebar = ({ open, setOpen }: SidebarProps) => {
           </button>
         </div>
         <h1 className="title mb-2 text-xl tracking-normal">Sankha Banerjee</h1>
-        <span className="mb-4">Crypto‑economic architect and engineering leader who:</span>
-        <span className="mb-4 text-sm">
-          Built and ran $1B+ weekly trading & market‑making systems on BitMEX and Binance.
-        </span>
+        <span className="mb-4">Crypto‑economic architect and Engineering leader who:</span>
         <p className="text-sm">
           • Built and ran $1B+ weekly trading & market‑making systems on BitMEX and Binance.
         </p>
