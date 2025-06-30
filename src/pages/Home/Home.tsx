@@ -32,7 +32,7 @@ const Home = () => {
 
       <img
         className="h-full object-cover w-[600px]"
-        src="/profile2.jpg"
+        src="/profile2.png"
         alt="Dr. Sankha Banerjee"
       />
     </div>
