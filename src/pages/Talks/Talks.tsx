@@ -25,7 +25,7 @@ const Talks = () => {
         <h1 className="section-title">Talks and Media</h1>
       </motion.div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-[8.5rem] gap-y-10">
         {talks.map((talk, index) => (
           <motion.button
             key={talk.id}
