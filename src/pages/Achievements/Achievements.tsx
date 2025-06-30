@@ -39,7 +39,7 @@ const Achievements = () => {
           physicists, CFD code developers, and machine-learning algorithms.
         </p>
         <img className="mb-8" src="/3c.png" alt="3c" />
-        <p>
+        <p className="text-sm">
           Introduced a geometric framework (Barycentric map) to visualize and constrain Reynolds
           stress uncertainty in turbulence models, now widely adopted in data-driven RANS modeling.
         </p>
@@ -52,9 +52,9 @@ const Achievements = () => {
         transition={{ delay: 0.2, duration: 0.5 }}
       >
         <h1 className="section-title text-sm">Why the Map Endures</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {whyTheMapEnduresData.map(({ title, description, Icon }) => (
-            <InfoCard key={title} title={title} description={description} Icon={Icon} />
+            <InfoCard type="info" key={title} title={title} description={description} Icon={Icon} />
           ))}
         </div>
       </motion.div>
@@ -73,7 +73,7 @@ const Achievements = () => {
                 {nutshellBarycentricMapTableConfig.headers.map(header => (
                   <th
                     key={header}
-                    className="max-md:px-3 px-6 py-3.5 border-b text-left font-normal"
+                    className="max-lg:px-3 px-6 py-3.5 border-b text-left font-normal"
                   >
                     {header}
                   </th>
@@ -83,11 +83,11 @@ const Achievements = () => {
             <tbody>
               {nutshellBarycentricMapTableConfig.rows.map(row => (
                 <tr key={row.element} className="text-sm dark-text max-lg:text-xs">
-                  <td className="max-md:px-3 px-6 py-3 border-b align-top font-semibold">
+                  <td className="max-lg:px-3 px-6 py-3 border-b align-top font-semibold">
                     {row.element}
                   </td>
-                  <td className="max-md:px-3 px-6 py-3 border-b align-top">{row.keyPoints}</td>
-                  <td className="max-md:px-3 px-6 py-3 border-b align-top">{row.whyItMatters}</td>
+                  <td className="max-lg:px-3 px-6 py-3 border-b align-top">{row.keyPoints}</td>
+                  <td className="max-lg:px-3 px-6 py-3 border-b align-top">{row.whyItMatters}</td>
                 </tr>
               ))}
             </tbody>
@@ -110,7 +110,7 @@ const Achievements = () => {
 
         <div className="grid grid-cols-1 gap-8">
           {howDuraisamyData.map(({ title, description, Icon }) => (
-            <InfoCard key={title} title={title} description={description} Icon={Icon} />
+            <InfoCard type="info" key={title} title={title} description={description} Icon={Icon} />
           ))}
         </div>
       </motion.div>
@@ -146,7 +146,7 @@ const Achievements = () => {
                 {nasaTurbulenceTableConfig.headers.map(header => (
                   <th
                     key={header}
-                    className="max-md:px-3 px-6 py-3.5 border-b text-left font-normal"
+                    className="max-lg:px-3 px-6 py-3.5 border-b text-left font-normal"
                   >
                     {header}
                   </th>
@@ -156,10 +156,10 @@ const Achievements = () => {
             <tbody>
               {nasaTurbulenceTableConfig.rows.map(row => (
                 <tr key={row.activity} className="text-sm max-lg:text-xs dark-text">
-                  <td className="max-md:px-3 px-6 py-3 border-b align-top font-semibold">
+                  <td className="max-lg:px-3 px-6 py-3 border-b align-top font-semibold">
                     {row.activity}
                   </td>
-                  <td className="max-md:px-3 px-6 py-3 border-b align-top">{row.role}</td>
+                  <td className="max-lg:px-3 px-6 py-3 border-b align-top">{row.role}</td>
                 </tr>
               ))}
             </tbody>

@@ -14,7 +14,7 @@ const ExternalProfiles = () => {
         <h1 className="section-title">External Professional Profiles</h1>
       </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {profiles.map((profile, index) => (
           <InfoCard
             key={profile.name}
