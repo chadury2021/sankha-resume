@@ -51,15 +51,7 @@ const Sidebar = ({ open, setOpen }: SidebarProps) => {
           </button>
         </div>
         <h1 className="title mb-2 text-xl tracking-normal">Sankha Banerjee</h1>
-        <span className="mb-4">Crypto‑economic architect and Engineering leader who:</span>
-        <p className="text-sm">
-          • Built and ran $1B+ weekly trading & market‑making systems on BitMEX and Binance.
-        </p>
-        <p className="text-sm">
-          • Bridged Citadel‑level quantitative finance with DeFi, designing Bitcoin staking
-          (Babylon) and cross‑chain liquidity models at Thorchain. Currently heading research at
-          Lombard.
-        </p>
+        <span className="mb-4">Crypto‑economic architect and Engineering leader</span>
       </div>
 
       {/* Navigation */}
