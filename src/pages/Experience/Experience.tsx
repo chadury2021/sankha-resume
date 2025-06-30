@@ -21,7 +21,7 @@ const Experience = () => {
           href="/sankha_banerjee.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center h-9 px-3 rounded-lg text-white bg-gradient-to-b from-[#04D9D9] to-[#17A0BF]"
+          className="text-sm font-medium inline-flex items-center h-9 px-3 rounded-lg text-white bg-gradient-to-b from-[#04D9D9] to-[#17A0BF]"
         >
           View extended resume
         </a>

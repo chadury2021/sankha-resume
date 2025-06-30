@@ -27,7 +27,7 @@ const Home = () => {
         </p>
         <Link
           to="/experience"
-          className="inline-flex items-center h-9 px-3 rounded-lg text-white bg-gradient-to-b from-[#04D9D9] to-[#17A0BF]"
+          className="text-sm font-medium inline-flex items-center h-9 px-3 rounded-lg text-white bg-gradient-to-b from-[#04D9D9] to-[#17A0BF]"
         >
           AI & Crypto Systems Architect
         </Link>
