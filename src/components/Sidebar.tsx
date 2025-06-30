@@ -44,7 +44,7 @@ const Sidebar = ({ open, setOpen }: SidebarProps) => {
           <img
             src="/profile.png"
             alt="Sankha Banerjee"
-            className="w-[100px] h-[100px] rounded-2xl max-lg:rounded-lg object-cover max-lg:w-10 max-lg:h-10"
+            className="w-16 h-16 rounded-2xl max-lg:rounded-lg object-cover max-lg:w-10 max-lg:h-10"
           />
           <button className="lg:hidden" onClick={() => setOpen(false)} aria-label="Toggle sidebar">
             <XMarkIcon />
