@@ -14,11 +14,11 @@ const MainLayout = () => {
   return (
     <div className="min-h-screen ">
       {/* Hamburger for mobile */}
-      <Header open={sidebarOpen} setOpen={setSidebarOpen} />
+      {!isHomePage && <Header open={sidebarOpen} setOpen={setSidebarOpen} />}
       {/* Centered container for sidebar + content */}
       <div className={cn({ 'container pt-6 lg:pt-10 w-full flex gap-x-20 h-full': !isHomePage })}>
         {!isHomePage && <Sidebar open={sidebarOpen} setOpen={setSidebarOpen} />}
-        <main className={cn('flex-1 pb-6 lg:pb-10', { 'blur-sm': sidebarOpen })}>
+        <main className={cn('flex-1', { 'pb-6 lg:pb-10': !isHomePage, 'blur-sm': sidebarOpen })}>
           <Outlet />
         </main>
       </div>
