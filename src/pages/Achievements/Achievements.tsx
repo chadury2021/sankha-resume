@@ -46,7 +46,7 @@ const Achievements = () => {
       </motion.div>
 
       <motion.div
-        className="mt-20"
+        className="mt-10 lg:mt-20"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.5 }}
@@ -60,7 +60,7 @@ const Achievements = () => {
       </motion.div>
 
       <motion.div
-        className="mt-20"
+        className="mt-10 lg:mt-20"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.4, duration: 0.5 }}
@@ -96,7 +96,7 @@ const Achievements = () => {
       </motion.div>
 
       <motion.div
-        className="mt-20"
+        className="mt-10 lg:mt-20"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.6, duration: 0.5 }}
@@ -116,7 +116,7 @@ const Achievements = () => {
       </motion.div>
 
       <motion.div
-        className="mt-20"
+        className="mt-10 lg:mt-20"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.8, duration: 0.5 }}

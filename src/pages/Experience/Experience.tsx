@@ -10,10 +10,10 @@ const Experience = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="mb-20"
+        className="mb-8 lg:mb-20"
       >
         <h1 className="section-title">Professional Experience</h1>
-        <p className="text-sm mb-8">
+        <p className="text-sm mb-6 lg:mb-8">
           Below is a concise, year-by-year timeline that integrates Dr. Sankha Banerjee’s academic
           milestones, professional transitions, and blockchain-related contributions.
         </p>
