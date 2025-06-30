@@ -16,7 +16,7 @@ const DateCard = ({ date, index, items, equalCols = false }: IDateCardProps) => 
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.1, duration: 0.5 }}
-      className={cn('grid grid-cols-1 gap-8', {
+      className={cn('grid grid-cols-1 gap-x-8 gap-y-10', {
         'lg:grid-cols-[120px_auto]': !equalCols,
         'lg:grid-cols-2': equalCols,
       })}
