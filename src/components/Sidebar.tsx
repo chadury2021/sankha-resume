@@ -34,7 +34,7 @@ const Sidebar = ({ open, setOpen }: SidebarProps) => {
 
   return (
     <aside
-      className={`lg:max-h-[calc(100vh-2.5rem)] overflow-y-auto max-lg:w-[309px] w-[216px] max-lg:p-5 bg-white lg:top-10 flex flex-col h-full max-w-full fixed right-0 top-0 lg:sticky z-40 transition-transform duration-300 lg:translate-x-0
+      className={`h-full lg:h-[calc(100vh-2.5rem)] overflow-y-auto max-lg:w-[309px] 2x:w-[216px] max-lg:p-5 bg-white flex flex-col max-w-full fixed right-0 top-0 lg:sticky lg:top-10 z-40 transition-transform duration-300 lg:translate-x-0
         ${open ? 'translate-x-0' : 'translate-x-full'}
         lg:translate-x-0`}
     >
@@ -61,7 +61,7 @@ const Sidebar = ({ open, setOpen }: SidebarProps) => {
       </div>
 
       {/* Navigation */}
-      <nav className="flex-1 py-6 lg:py-24">
+      <nav className="flex items-center flex-1 py-9">
         <ul className="space-y-3">
           {navLinks.map(link => (
             <li key={link.path}>
