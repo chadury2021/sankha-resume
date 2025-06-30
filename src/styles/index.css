@@ -98,7 +98,7 @@
 
 @layer components {
   .container {
-    @apply px-4 mx-auto max-w-6xl;
+    @apply px-6 mx-auto max-w-6xl;
   }
 
   .title {
