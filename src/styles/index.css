@@ -103,7 +103,7 @@
   }
 
   .section-title {
-    @apply text-sm mb-8 lg:mb-10 lowercase font-shuriken;
+    @apply text-sm mb-6 lg:mb-10 lowercase font-shuriken;
   }
 
   .icon-box-wrapper {
