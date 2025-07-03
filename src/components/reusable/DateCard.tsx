@@ -8,9 +8,10 @@ export interface IDateCardProps {
   index: number;
   items: IInfoCardProps[];
   equalCols?: boolean;
+  type?: 'info' | 'link';
 }
 
-const DateCard = ({ date, index, items, equalCols = false }: IDateCardProps) => {
+const DateCard = ({ date, index, items, equalCols = false, type = 'info' }: IDateCardProps) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -29,15 +30,16 @@ const DateCard = ({ date, index, items, equalCols = false }: IDateCardProps) => 
         <div className="ml-2.5 mt-2 bg-[#17A0BF1A] h-full w-[1px] max-lg:hidden" />
       </div>
       <div className="flex flex-col gap-y-4">
-        {items.map(({ title, description, descriptionsList, Icon }, itemIndex) => (
+        {items.map(({ title, description, descriptionsList, Icon, link }, itemIndex) => (
           <InfoCard
             key={title}
             title={title}
             description={description}
             descriptionsList={descriptionsList}
             Icon={Icon}
-            type="info"
+            type={type}
             index={itemIndex}
+            link={link}
           />
         ))}
       </div>

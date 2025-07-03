@@ -65,9 +65,21 @@ const InfoCard = ({
         <div className="icon-box-wrapper">
           <div className="icon-box">{Icon}</div>
         </div>
-        <div className="flex flex-col gap-y-1">
+        <div className="flex flex-col gap-y-1.5">
           <h1 className="dark-text text-sm lg:text-base">{title}</h1>
-          <p className="text-xs lg:text-sm">{description}</p>
+          {description && <p className="text-xs lg:text-sm">{description}</p>}
+          {descriptionsList.map(({ sectionTitle, descriptions }, dlIndex) => (
+            <div className="flex flex-col gap-y-2 mt-1.5" key={dlIndex}>
+              {sectionTitle && (
+                <span className="highlighted-text text-xs lg:text-sm">{sectionTitle}</span>
+              )}
+              {descriptions.map((el, dIndex) => (
+                <p key={dIndex} className="text-xs lg:text-sm">
+                  {el}
+                </p>
+              ))}
+            </div>
+          ))}
         </div>
       </motion.a>
     );

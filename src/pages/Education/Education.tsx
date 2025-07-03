@@ -10,11 +10,13 @@ const data = [
         title: 'PhD in Applied Mathematics',
         description: 'Massachusetts Institute of Technology',
         Icon: <img src="/External/mit.png" alt="mit" />,
+        link: 'https://www.mit.edu/',
       },
       {
         title: 'MS in Computer Science',
         description: 'FAU, Germany',
         Icon: <img src="/External/fau.png" alt="fau" />,
+        link: 'https://www.fau.eu/',
       },
     ],
   },
@@ -25,6 +27,7 @@ const data = [
         title: 'BE in Computer Science',
         description: 'TUM, Germany',
         Icon: <img src="/External/tum.png" alt="tum" />,
+        link: 'https://www.tum.de/en/',
       },
     ],
   },
@@ -49,6 +52,16 @@ const Education = () => {
       >
         {data.map(({ date, items }, index) => (
           <DateCard key={index} date={date} index={index} items={items} equalCols />
+        ))}
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.2, duration: 0.5 }}
+        className="flex flex-col gap-y-8"
+      >
+        {data.map(({ date, items }, index) => (
+          <DateCard key={index} date={date} index={index} items={items} equalCols type="link" />
         ))}
       </motion.div>
     </div>

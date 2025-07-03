@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
-    <div className="max-lg:pt-20 max-lg:gap-y-8 flex flex-col items-start justify-between h-screen relative overflow-hidden lg:flex-row lg:items-center">
+    <div className="max-lg:pt-20 max-lg:gap-y-8 flex flex-col items-start justify-between h-screen relative  lg:flex-row lg:items-center">
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
@@ -19,11 +19,11 @@ const Home = () => {
         </h1>
         <p className="mb-3">Crypto‑economic architect and Engineering leader who:</p>
         <p className="mb-3 text-sm">
-          Built and ran $1B+ weekly trading & market‑making systems on BitMEX and Binance.
-        </p>
-        <p className="mb-8 text-sm">
           Bridged Citadel‑level quantitative finance with DeFi, designing Bitcoin staking (Babylon)
           and cross‑chain liquidity models at Thorchain. Currently heading research at Lombard.
+        </p>
+        <p className="mb-8 text-sm">
+          Built and ran $1B+ weekly trading & market‑making systems on BitMEX and Binance.
         </p>
         <Link
           to="/experience"
@@ -34,7 +34,7 @@ const Home = () => {
       </motion.div>
 
       <img
-        className="h-full object-cover 2xl:w-[600px] lg:w-[480px]"
+        className="lg:h-full object-cover w-full 2xl:w-[600px] lg:w-[480px]"
         src="/profile2.png"
         alt="Dr. Sankha Banerjee"
       />
