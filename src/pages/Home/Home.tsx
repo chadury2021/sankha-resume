@@ -17,7 +17,9 @@ const Home = () => {
           DR. sankha <br className="max-lg:hidden 2xl:hidden" />
           banerjee
         </h1>
-        <p className="mb-3">Crypto‑economic architect and Engineering leader who:</p>
+        <p className="mb-3 highlighted-text font-medium">
+          Crypto‑economic architect and Engineering leader who:
+        </p>
         <p className="mb-3 text-sm">
           Bridged Citadel‑level quantitative finance with DeFi, designing Bitcoin staking (Babylon)
           and cross‑chain liquidity models at Thorchain. Currently heading research at Lombard.

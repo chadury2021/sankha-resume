@@ -37,7 +37,7 @@ const Talks = () => {
             onKeyDown={e => handleKeyPress(e, talk.youtubeUrl)}
             className="rounded-lg flex w-full text-left gap-x-4 bg-white overflow-hidden focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
           >
-            <div className="relative flex icon-box-wrapper rounded-lg">
+            <div className="relative flex icon-box-wrapper w-16 h-16 min-w-16 rounded-lg">
               <img src={talk.thumbnailUrl} alt="thumbnail" className="w-full h-full object-cover" />
               <div className="absolute w-full h-full flex items-center justify-center">
                 <svg

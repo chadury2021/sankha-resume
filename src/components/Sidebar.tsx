@@ -51,7 +51,10 @@ const Sidebar = ({ open, setOpen }: SidebarProps) => {
           </button>
         </div>
         <h1 className="title mb-2 text-xl tracking-normal">Sankha Banerjee</h1>
-        <span className="mb-4">Crypto‑economic architect and Engineering leader</span>
+        <span className="mb-4">
+          Crypto‑economic architect and <br />
+          Engineering leader
+        </span>
       </div>
 
       {/* Navigation */}
