@@ -43,17 +43,6 @@ const Education = () => {
       >
         <h1 className="section-title text-sm">Education</h1>
       </motion.div>
-
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.2, duration: 0.5 }}
-        className="flex flex-col gap-y-8"
-      >
-        {data.map(({ date, items }, index) => (
-          <DateCard key={index} date={date} index={index} items={items} equalCols />
-        ))}
-      </motion.div>
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
