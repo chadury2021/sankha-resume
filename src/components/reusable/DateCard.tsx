@@ -4,7 +4,7 @@ import InfoCard, { IInfoCardProps } from './InfoCard';
 import { cn } from '../../lib/utils.ts';
 
 export interface IDateCardProps {
-  date: string;
+  date?: string;
   index: number;
   items: IInfoCardProps[];
   equalCols?: boolean;
@@ -24,8 +24,12 @@ const DateCard = ({ date, index, items, equalCols = false, type = 'info' }: IDat
     >
       <div className="flex flex-col items-start">
         <div className="px-2 py-1 bg-[#17A0BF1A] rounded-[4px] h-5 flex items-center whitespace-nowrap">
-          <div className="dateTagDot mr-2.5 mb-[1px]" />
-          <span className="font-shuriken text-[10px] tracking-[0.02em] text-[#17A0BF]">{date}</span>
+          <div className={cn('dateTagDot mb-[1px]', { 'mr-2.5': !!date })} />
+          {date && (
+            <span className="font-shuriken text-[10px] tracking-[0.02em] text-[#17A0BF]">
+              {date}
+            </span>
+          )}
         </div>
         <div className="ml-2.5 mt-2 bg-[#17A0BF1A] h-full w-[1px] max-lg:hidden" />
       </div>
