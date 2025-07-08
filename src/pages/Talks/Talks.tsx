@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { KeyboardEvent } from 'react';
 
 import { talks } from './data';
+import { cn } from '../../lib/utils.ts';
 
 const Talks = () => {
   const handleVideoClick = (url: string) => {
@@ -25,7 +26,7 @@ const Talks = () => {
         <h1 className="section-title">Talks and Media</h1>
       </motion.div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-[8.5rem] gap-y-10">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-6 gap-y-10">
         {talks.map((talk, index) => (
           <motion.button
             key={talk.id}
@@ -35,9 +36,16 @@ const Talks = () => {
             onClick={() => handleVideoClick(talk.youtubeUrl)}
             aria-label={`Watch video: ${talk.title}`}
             onKeyDown={e => handleKeyPress(e, talk.youtubeUrl)}
-            className="rounded-lg flex w-full text-left gap-x-4 bg-white overflow-hidden focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+            className="rounded-lg flex flex-col w-full text-left bg-white overflow-hidden focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
           >
-            <div className="relative flex icon-box-wrapper w-16 h-16 min-w-16 rounded-lg">
+            <div
+              className={cn(
+                'relative w-full flex icon-box-wrapper rounded-lg mb-4',
+                'max-w-[23.85rem] h-[12.5rem]',
+                // 'max-2xl:max-w-[17rem] max-2xl:h-[8.75rem]',
+                'max-lg:max-w-[21.5rem] max-lg:h-[11.25rem]'
+              )}
+            >
               <img src={talk.thumbnailUrl} alt="thumbnail" className="w-full h-full object-cover" />
               <div className="absolute w-full h-full flex items-center justify-center">
                 <svg
@@ -51,8 +59,8 @@ const Talks = () => {
               </div>
             </div>
             <div className="flex flex-col gap-y-1">
-              <span className="highlighted-text text-xs">{talk.date}</span>
-              <span className="text-sm dark-text">{talk.title}</span>
+              <span className="highlighted-text text-sm">{talk.date}</span>
+              <span className="dark-text">{talk.title}</span>
             </div>
           </motion.button>
         ))}
