@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 
-import { ReactComponent as DocumentIcon } from '../../assets/document.svg';
 import { ReactComponent as PdfIcon } from '../../assets/pdf.svg';
 import DateCard, { IDateCardProps } from '../../components/reusable/DateCard';
 
@@ -21,7 +20,6 @@ const data: { date: string; items: IDateCardProps['items'] }[] = [
         ],
         Icon: <PdfIcon className="min-w-12 w-12 h-12" />,
         link: '/BitFrost-Design.pdf',
-        type: 'link',
       },
     ],
   },
@@ -39,7 +37,8 @@ const data: { date: string; items: IDateCardProps['items'] }[] = [
             ],
           },
         ],
-        Icon: <DocumentIcon />,
+        Icon: <PdfIcon className="min-w-12 w-12 h-12" />,
+        link: '/Three_dimensional_effects_on_flag_flappi.pdf',
       },
     ],
   },
@@ -59,7 +58,8 @@ const data: { date: string; items: IDateCardProps['items'] }[] = [
             ],
           },
         ],
-        Icon: <DocumentIcon />,
+        Icon: <PdfIcon className="min-w-12 w-12 h-12" />,
+        link: '/Presentation_of_anisotropy_properties_of.pdf',
       },
     ],
   },
