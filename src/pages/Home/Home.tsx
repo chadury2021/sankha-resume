@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
+import LinkText from '../../components/reusable/LinkText.tsx';
+
 const Home = () => {
   return (
     <div className="max-lg:pt-20 max-lg:gap-y-8 flex flex-col items-start justify-between h-screen relative  lg:flex-row lg:items-center">
@@ -18,14 +20,22 @@ const Home = () => {
           banerjee
         </h1>
         <p className="mb-3 highlighted-text font-medium">
-          Crypto‑economic architect and Engineering leader who:
+          Technical Leader bridging quantitative finance with decentralized protocols.
         </p>
         <p className="mb-3 text-sm">
-          Bridged Citadel‑level quantitative finance with DeFi, designing Bitcoin staking (Babylon)
-          and cross‑chain liquidity models at Thorchain. Currently heading research at Lombard.
+          Expertise spans distributed systems architecture, quantitative modeling, and protocol
+          design.
+        </p>
+        <p className="mb-3 text-sm">
+          Built and scaled $1B+ weekly trading infrastructure across BitMEX and Binance.
         </p>
         <p className="mb-8 text-sm">
-          Built and ran $1B+ weekly trading & market‑making systems on BitMEX and Binance.
+          Currently driving protocol research at{' '}
+          <LinkText url="https://www.lombard.finance/" title="Lombard" /> while pioneering
+          cross-chain financial primitives—Bitcoin staking (
+          <LinkText url="https://babylonlabs.io/" title="Babylon protocol" />) to liquidity
+          optimization models (<LinkText url="https://thorchain.org/" title="Thorchain" />
+          ).
         </p>
         <Link
           to="/experience"

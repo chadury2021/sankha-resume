@@ -1,4 +1,3 @@
-import AchievementsLink from './components/AchievementsLink';
 import { ReactComponent as BuildingIcon } from '../../assets/building-library.svg';
 import { ReactComponent as ChartBarIcon } from '../../assets/chart-bar.svg';
 import { ReactComponent as CodeBracketLineIcon } from '../../assets/code-bracket-square.svg';
@@ -6,6 +5,7 @@ import { ReactComponent as LinkIcon } from '../../assets/link.svg';
 import { ReactComponent as ChartLineIcon } from '../../assets/presentation-chart-line.svg';
 import { ReactComponent as ScaleIcon } from '../../assets/scale.svg';
 import { ReactComponent as ShieldExclamationIcon } from '../../assets/shield-exclamation.svg';
+import LinkText from '../../components/reusable/LinkText.tsx';
 
 export const whyTheMapEnduresData = [
   {
@@ -43,7 +43,7 @@ export const nutshellBarycentricMapTableConfig = {
           <span className="highlighted-text">Banerjee, Krahl, Durst & Zenger (2007)</span> as a
           transformation of the classical Lumley invariant triangle to{' '}
           <span className="highlighted-text">barycentric (simplex) coordinates</span>. (
-          <AchievementsLink
+          <LinkText
             url="https://www.annualreviews.org/content/journals/10.1146/annurev-fluid-010518-040547"
             title="annualreviews.org"
           />
@@ -90,7 +90,7 @@ export const howDuraisamyData = [
       <span>
         Eigenvalue perturbations toward the triangle’s vertices are highlighted as a principled way
         to bracket RANS predictions. (
-        <AchievementsLink
+        <LinkText
           url="https://www.annualreviews.org/content/journals/10.1146/annurev-fluid-010518-040547"
           title="annualreviews.org"
         />
@@ -106,7 +106,7 @@ export const howDuraisamyData = [
         The review points to the{' '}
         <span className="highlighted-text">Eigenspace-Perturbation Method</span> of Iaccarino,
         Mishra & Ghili (2017), which is formulated directly in barycentric space. (
-        <AchievementsLink
+        <LinkText
           url="https://www.annualreviews.org/content/journals/10.1146/annurev-fluid-010518-040547"
           title="annualreviews.org"
         />
@@ -121,7 +121,7 @@ export const howDuraisamyData = [
       <span>
         The map’s coordinate tuples are recommended as low-dimensional, physics-aware inputs to
         regression or neural-network surrogates. (
-        <AchievementsLink
+        <LinkText
           url="https://www.annualreviews.org/content/journals/10.1146/annurev-fluid-010518-040547"
           title="annualreviews.org"
         />
@@ -142,7 +142,7 @@ export const nasaTurbulenceTableConfig = {
           NASA‐funded studies adopt the Emory–Iaccarino eigen-perturbation framework, which is
           defined in barycentric space, to generate epistemic uncertainty envelopes for vehicle
           aerodynamics. (
-          <AchievementsLink
+          <LinkText
             url="https://www.annualreviews.org/content/journals/10.1146/annurev-fluid-010518-040547"
             title="annualreviews.org"
           />
@@ -156,11 +156,7 @@ export const nasaTurbulenceTableConfig = {
         <span>
           Verification cases and benchmarking discussions reference anisotropy fidelity; barycentric
           plots are a standard deliverable when RANS results are uploaded to the Langley portal. (
-          <AchievementsLink
-            url="https://turbmodels.larc.nasa.gov/"
-            title="turbmodels.larc.nasa.gov"
-          />
-          )
+          <LinkText url="https://turbmodels.larc.nasa.gov/" title="turbmodels.larc.nasa.gov" />)
         </span>
       ),
     },
@@ -171,7 +167,7 @@ export const nasaTurbulenceTableConfig = {
           During high-lift and transonic workshops, NASA and partners quantify model departures from
           DNS/experiment by tracking trajectories inside the barycentric triangle—now a routine
           post-processing step. (
-          <AchievementsLink
+          <LinkText
             url="https://www.researchgate.net/figure/Barycentric-map-of-the-predicted-Reynolds-stress-anisotropy-for-periodic-hill-training_fig3_367303532?utm_source=chatgpt.com"
             title="researchgate.net"
           />
@@ -185,7 +181,7 @@ export const nasaTurbulenceTableConfig = {
         <span>
           Recent NASA PIV diagnostics embed barycentric-map visualisations to relate measured
           Reynolds stresses to RANS/LES predictions for SWBLI control concepts. (
-          <AchievementsLink
+          <LinkText
             url="https://ntrs.nasa.gov/api/citations/20230016768/downloads/Reising_Scitech24_W6BPIVReport2.pdf?utm_source=chatgpt.com"
             title="ntrs.nasa.gov"
           />

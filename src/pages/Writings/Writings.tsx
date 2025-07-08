@@ -5,6 +5,25 @@ import DateCard, { IDateCardProps } from '../../components/reusable/DateCard';
 
 const data: { date: string; items: IDateCardProps['items'] }[] = [
   {
+    date: '2007',
+    items: [
+      {
+        title:
+          'Presentation of anisotropy properties of turbulence invariants versus eigenvalue approaches',
+        descriptionsList: [
+          {
+            sectionTitle: 'Journal of Turbulence',
+            descriptions: [
+              'This work presents a framework using invariant theory to characterize the anisotropy of turbulent flows, comparing classical invariant maps with eigenvalue methods',
+            ],
+          },
+        ],
+        Icon: <PdfIcon className="min-w-12 w-12 h-12" />,
+        link: '/DELFI_Whitepaper-2.pdf',
+      },
+    ],
+  },
+  {
     date: '2025',
     items: [
       {
