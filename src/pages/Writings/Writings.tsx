@@ -1,9 +1,30 @@
 import { motion } from 'framer-motion';
 
 import { ReactComponent as DocumentIcon } from '../../assets/document.svg';
+import { ReactComponent as PdfIcon } from '../../assets/pdf.svg';
 import DateCard, { IDateCardProps } from '../../components/reusable/DateCard';
 
 const data: { date: string; items: IDateCardProps['items'] }[] = [
+  {
+    date: '2025',
+    items: [
+      {
+        title:
+          'BitFrost: A GG20-Based Threshold Signature Scheme for Secure Cross-Chain Native Token Transfers',
+        descriptionsList: [
+          {
+            sectionTitle: 'Bitfrost',
+            descriptions: [
+              'This work presents BitFrost, a FROST-optimized threshold signature enhancement to Wormhole’s Native Token Transfers, enabling secure, scalable, and backward-compatible cross-chain transfers with 67% improved performance and strong Byzantine fault tolerance.',
+            ],
+          },
+        ],
+        Icon: <PdfIcon className="min-w-12 w-12 h-12" />,
+        link: '/BitFrost-Design.pdf',
+        type: 'link',
+      },
+    ],
+  },
   {
     date: '2015',
     items: [
@@ -59,10 +80,10 @@ const Writings = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.5 }}
-        className="flex flex-col gap-y-8"
+        className="flex flex-col gap-y-10"
       >
         {data.map(({ date, items }, index) => (
-          <DateCard key={index} date={date} index={index} items={items} />
+          <DateCard type="link" key={index} date={date} index={index} items={items} />
         ))}
       </motion.div>
 

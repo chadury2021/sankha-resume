@@ -43,7 +43,7 @@ const InfoCard = ({
             </span>
           )}
           {descriptionsList.map(({ sectionTitle, descriptions }, dlIndex) => (
-            <div className="flex flex-col gap-y-2 mt-1.5" key={dlIndex}>
+            <div className="flex flex-col gap-y-2 mt-1" key={dlIndex}>
               {sectionTitle && (
                 <span className="highlighted-text text-xs lg:text-sm">{sectionTitle}</span>
               )}
@@ -81,7 +81,7 @@ const InfoCard = ({
             </span>
           )}
           {descriptionsList.map(({ sectionTitle, descriptions }, dlIndex) => (
-            <div className="flex flex-col gap-y-2 mt-1.5" key={dlIndex}>
+            <div className="flex flex-col gap-y-2 mt-1" key={dlIndex}>
               {sectionTitle && (
                 <span className="highlighted-text text-xs lg:text-sm">{sectionTitle}</span>
               )}
