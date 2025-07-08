@@ -8,6 +8,7 @@ export interface IInfoCardProps {
   descriptionsList?: { sectionTitle: string; descriptions: string[] }[];
   index?: number;
   link?: string;
+  linkTitle?: string;
   Icon?: ReactElement;
 }
 
@@ -16,6 +17,7 @@ const InfoCard = ({
   descriptionsList = [],
   description,
   link,
+  linkTitle,
   Icon,
   index = 0,
   type = 'info',
@@ -32,9 +34,14 @@ const InfoCard = ({
         <div className="icon-box-wrapper">
           <div className="icon-box">{Icon}</div>
         </div>
-        <div className="flex flex-col gap-y-1.5">
+        <div className="flex flex-col gap-y-1">
           <h1 className="dark-text text-sm lg:text-base">{title}</h1>
           {description && <p className="text-xs lg:text-sm">{description}</p>}
+          {linkTitle && (
+            <span className="text-xs lg:text-sm lg:leading-4">
+              (<span className="text-[#0000EE]">{linkTitle}</span>)
+            </span>
+          )}
           {descriptionsList.map(({ sectionTitle, descriptions }, dlIndex) => (
             <div className="flex flex-col gap-y-2 mt-1.5" key={dlIndex}>
               {sectionTitle && (
@@ -65,9 +72,14 @@ const InfoCard = ({
         <div className="icon-box-wrapper">
           <div className="icon-box">{Icon}</div>
         </div>
-        <div className="flex flex-col gap-y-1.5">
+        <div className="flex flex-col gap-y-1">
           <h1 className="dark-text text-sm lg:text-base">{title}</h1>
           {description && <p className="text-xs lg:text-sm">{description}</p>}
+          {linkTitle && (
+            <span className="text-xs lg:text-sm lg:leading-4">
+              (<span className="text-[#0000EE]">{linkTitle}</span>)
+            </span>
+          )}
           {descriptionsList.map(({ sectionTitle, descriptions }, dlIndex) => (
             <div className="flex flex-col gap-y-2 mt-1.5" key={dlIndex}>
               {sectionTitle && (
