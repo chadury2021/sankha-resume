@@ -9,12 +9,12 @@ const data: { date: string; items: IDateCardProps['items'] }[] = [
     items: [
       {
         title:
-          'Presentation of anisotropy properties of turbulence invariants versus eigenvalue approaches',
+          'Delfi: Secondary Market Design For Enhancing Validator Liquidity And Reducing Exchange Risk',
         descriptionsList: [
           {
-            sectionTitle: 'Journal of Turbulence',
+            sectionTitle: 'Delfi',
             descriptions: [
-              'This work presents a framework using invariant theory to characterize the anisotropy of turbulent flows, comparing classical invariant maps with eigenvalue methods',
+              'The current whitepaper presents a novel secondary market design aimed at addressing the exchange risk and liquidity challenges faced by validators within the Eigenlayer ecosystem and potentially similar protocols. Validators who prefer to hold assets in Ethereum (ETH) are exposed to significant exchange rate risks due to the long-term lock-in period of their stakes. Such allocation of risk is inefficient because of the lack of effective risk-sharing mechanisms within the current ecosystem, which adversely affects pricing and adoption of re-staking services. This proposal seeks to mitigate the existing inefficiency of risk sharing by creating a secondary market for forward contracts, thereby enhancing the scalability of protocols like Eigenlayer and Babylon. The paper discusses the problem statement, the proposed solution, and its implications for Total Value Locked (TVL) improvement.',
             ],
           },
         ],
