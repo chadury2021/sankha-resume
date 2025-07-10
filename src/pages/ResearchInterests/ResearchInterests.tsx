@@ -74,9 +74,9 @@ const ResearchInterests = () => {
       >
         <h1 className="text-sm mb-8">Key Publications</h1>
 
-        <div className="flex flex-col gap-y-8">
+        <div className="flex flex-col gap-y-10">
           {publications.map(({ date, items }, index) => (
-            <DateCard key={index} date={date} index={index} items={items} />
+            <DateCard type="link" key={index} date={date} index={index} items={items} />
           ))}
         </div>
       </motion.div>

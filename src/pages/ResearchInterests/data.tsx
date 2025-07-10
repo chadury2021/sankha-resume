@@ -1,4 +1,4 @@
-import { ReactComponent as DocumentIcon } from '../../assets/document.svg';
+import { ReactComponent as PdfIcon } from '../../assets/pdf.svg';
 
 export const publications = [
   {
@@ -15,7 +15,8 @@ export const publications = [
             ],
           },
         ],
-        Icon: <DocumentIcon />,
+        Icon: <PdfIcon className="min-w-12 w-12 h-12" />,
+        link: '/Three_dimensional_effects_on_flag_flappi.pdf',
       },
     ],
   },
@@ -27,15 +28,15 @@ export const publications = [
           'Presentation of Anisotropy Properties of Turbulence (Invariants vs Eigenvalue Approaches)',
         descriptionsList: [
           {
-            sectionTitle:
-              'Proceedings of the 13th WSEAS International Conference on Applied Mathematics',
+            sectionTitle: 'Journal of Turbulence',
             descriptions: [
               'This work presents a framework using invariant theory to characterize the anisotropy of turbulent flows, comparing classical invariant maps with eigenvalue methods',
               '(Co-authored with Ö. Ertunç and F. Durst during Banerjee’s time in Germany)',
             ],
           },
         ],
-        Icon: <DocumentIcon />,
+        Icon: <PdfIcon className="min-w-12 w-12 h-12" />,
+        link: '/Presentation_of_anisotropy_properties_of.pdf',
       },
     ],
   },

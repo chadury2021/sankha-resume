@@ -5,25 +5,6 @@ import DateCard, { IDateCardProps } from '../../components/reusable/DateCard';
 
 const data: { date: string; items: IDateCardProps['items'] }[] = [
   {
-    date: '2024',
-    items: [
-      {
-        title:
-          'Delfi: Secondary Market Design For Enhancing Validator Liquidity And Reducing Exchange Risk',
-        descriptionsList: [
-          {
-            sectionTitle: 'Delfi',
-            descriptions: [
-              'The current whitepaper presents a novel secondary market design aimed at addressing the exchange risk and liquidity challenges faced by validators within the Eigenlayer ecosystem and potentially similar protocols. Validators who prefer to hold assets in Ethereum (ETH) are exposed to significant exchange rate risks due to the long-term lock-in period of their stakes. Such allocation of risk is inefficient because of the lack of effective risk-sharing mechanisms within the current ecosystem, which adversely affects pricing and adoption of re-staking services. This proposal seeks to mitigate the existing inefficiency of risk sharing by creating a secondary market for forward contracts, thereby enhancing the scalability of protocols like Eigenlayer and Babylon. The paper discusses the problem statement, the proposed solution, and its implications for Total Value Locked (TVL) improvement.',
-            ],
-          },
-        ],
-        Icon: <PdfIcon className="min-w-12 w-12 h-12" />,
-        link: '/DELFI_Whitepaper-2.pdf',
-      },
-    ],
-  },
-  {
     date: '2025',
     items: [
       {
@@ -43,42 +24,21 @@ const data: { date: string; items: IDateCardProps['items'] }[] = [
     ],
   },
   {
-    date: '2015',
-    items: [
-      {
-        title: 'Three-dimensional Effects on Flag Flapping Dynamics',
-        descriptionsList: [
-          {
-            sectionTitle: 'Journal of Fluid Mechanics, 783:103–136',
-            descriptions: [
-              'This paper examines how 3D structural and flow effects influence the fluttering behavior of a flexible flag in a uniform stream.',
-              '(Co-authored with B. S. H. Connell and Prof. Dick K. P. Yue at MIT)',
-            ],
-          },
-        ],
-        Icon: <PdfIcon className="min-w-12 w-12 h-12" />,
-        link: '/Three_dimensional_effects_on_flag_flappi.pdf',
-      },
-    ],
-  },
-  {
-    date: '2007',
+    date: '2024',
     items: [
       {
         title:
-          'Presentation of Anisotropy Properties of Turbulence (Invariants vs Eigenvalue Approaches)',
+          'Delfi: Secondary Market Design For Enhancing Validator Liquidity And Reducing Exchange Risk',
         descriptionsList: [
           {
-            sectionTitle:
-              'Proceedings of the 13th WSEAS International Conference on Applied Mathematics',
+            sectionTitle: 'Delfi',
             descriptions: [
-              'This work presents a framework using invariant theory to characterize the anisotropy of turbulent flows, comparing classical invariant maps with eigenvalue methods',
-              '(Co-authored with Ö. Ertunç and F. Durst during Banerjee’s time in Germany)',
+              'The current whitepaper presents a novel secondary market design aimed at addressing the exchange risk and liquidity challenges faced by validators within the Eigenlayer ecosystem and potentially similar protocols. Validators who prefer to hold assets in Ethereum (ETH) are exposed to significant exchange rate risks due to the long-term lock-in period of their stakes. Such allocation of risk is inefficient because of the lack of effective risk-sharing mechanisms within the current ecosystem, which adversely affects pricing and adoption of re-staking services. This proposal seeks to mitigate the existing inefficiency of risk sharing by creating a secondary market for forward contracts, thereby enhancing the scalability of protocols like Eigenlayer and Babylon. The paper discusses the problem statement, the proposed solution, and its implications for Total Value Locked (TVL) improvement.',
             ],
           },
         ],
         Icon: <PdfIcon className="min-w-12 w-12 h-12" />,
-        link: '/Presentation_of_anisotropy_properties_of.pdf',
+        link: '/DELFI_Whitepaper-2.pdf',
       },
     ],
   },
