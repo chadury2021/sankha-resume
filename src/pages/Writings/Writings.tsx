@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 
 import { ReactComponent as PdfIcon } from '../../assets/pdf.svg';
 import DateCard, { IDateCardProps } from '../../components/reusable/DateCard';
+import LinkText from '../../components/reusable/LinkText.tsx';
 
 const data: { date: string; items: IDateCardProps['items'] }[] = [
   {
@@ -110,9 +111,12 @@ const Writings = () => {
       >
         <h1 className="section-title text-sm">Additional</h1>
         <p className="text-sm">
-          Dr. Banerjee has{' '}
-          <span className="highlighted-text">authored over 10 peer-reviewed publications</span> in
-          total. His research contributions span topics like turbulent{' '}
+          Dr. Banerjee has <span className="highlighted-text">authored over</span>{' '}
+          <LinkText
+            title="10 peer-reviewed publications"
+            url="https://scholar.google.com/citations?user=i_U5uG0AAAAJ"
+          />{' '}
+          in total. His research contributions span topics like turbulent{' '}
           <span className="highlighted-text">wake flows</span>, computational modeling of{' '}
           <span className="highlighted-text">fluid instabilities</span>, and applications of
           data-driven methods to classical mechanics.
