@@ -61,7 +61,7 @@ const About = () => {
         </p>
         <p className=" mb-4">
           In <span className="highlighted-text">2020</span>, he became the CEO of{' '}
-          <span className="highlighted-text">Credence Limited</span>, where he managed a
+          <span className="highlighted-text">Multi-Strategy Family Office</span>, where he managed a
           multi-million dollar fund investing in early-stage layer-1 blockchain protocols with a
           focus on DeFi infrastructure. His investment strategy emphasized rigorous codebase and
           infrastructure evaluation, particularly within the{' '}
