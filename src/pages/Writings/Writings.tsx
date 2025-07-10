@@ -24,6 +24,42 @@ const data: { date: string; items: IDateCardProps['items'] }[] = [
     ],
   },
   {
+    date: '2025',
+    items: [
+      {
+        title: 'A Game-Theoretic Model of Staking, Restaking, and Token Inflation',
+        descriptionsList: [
+          {
+            sectionTitle: 'Internal research',
+            descriptions: [
+              'This whitepaper presents a stylized mathematical and game-theoretic model for large-scale staking (or “restaking”) of BTC/ETH into protocols that promise yield in their native tokens. We explore the tension that arises when real protocol revenue is insufficient to meet stakers’ yield demands. Continuous token inflation can lead to a self-perpetuating cycle of token price declines, prompting an eventual shrinkage or implosion of the ecosystem. We contextualize this with the scenario outlined in discussions about Babylon, EigenLayer, and other shared security solutions.',
+            ],
+          },
+        ],
+        Icon: <PdfIcon className="min-w-12 w-12 h-12" />,
+        link: '/Emissions.pdf',
+      },
+    ],
+  },
+  {
+    date: '2024',
+    items: [
+      {
+        title: 'Global Over-the-Counter (OTC) Market Overview: A Whitepaper',
+        descriptionsList: [
+          {
+            sectionTitle: 'Internal research',
+            descriptions: [
+              'This whitepaper provides an overview of the global Over-the-Counter (OTC) market, which includes a wide range of financial securities traded directly between parties without a centralized exchange, as well as non-prescription pharmaceutical products. The scale, market size, and key trends of this diverse marketplace are highlighted.',
+            ],
+          },
+        ],
+        Icon: <PdfIcon className="min-w-12 w-12 h-12" />,
+        link: '/OTC_Market-Design.pdf',
+      },
+    ],
+  },
+  {
     date: '2024',
     items: [
       {
