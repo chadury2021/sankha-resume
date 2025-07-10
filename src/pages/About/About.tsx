@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion';
 
+import LinkText from '../../components/reusable/LinkText.tsx';
+
 const About = () => {
   return (
     <div>
@@ -28,8 +30,12 @@ const About = () => {
           , giving him a strong foundation in quantitative finance. Prior to his time at MIT,
           Banerjee finished his Bachelors and Masters in Computer Science at a technical university
           in Germany, where he received the{' '}
-          <span className="highlighted-text">Elite Student Award of Bavaria</span> for publishing a
-          novel mathematical proof related to turbulence mapping.
+          <span className="highlighted-text">Elite Student Award of Bavaria</span> for publishing a{' '}
+          <LinkText
+            title="novel mathematical proof related to turbulence mapping"
+            url="https://www.tandfonline.com/doi/full/10.1080/14685240701506896"
+          />
+          .
         </p>
         <p className=" mb-4">
           During his Ph.D. at MIT, Banerjee leveraged advanced supercomputing facilities to simulate
