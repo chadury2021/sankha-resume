@@ -11,6 +11,13 @@ const data = [
     linkTitle: 'mit.edu',
   },
   {
+    name: 'MS in Finance',
+    description: 'MIT Sloan School of Management',
+    icon: <img src="/External/mit_sloan.jpg" alt="mit sloan" />,
+    link: 'https://mitsloan.mit.edu/',
+    linkTitle: 'mitsloan.mit.edu',
+  },
+  {
     name: 'MS in Computer Science',
     description: 'FAU, Germany',
     icon: <img src="/External/fau.png" alt="fau" />,
