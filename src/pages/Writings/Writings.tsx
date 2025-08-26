@@ -10,6 +10,50 @@ const data: { date: string; items: IDateCardProps['items'] }[] = [
     items: [
       {
         title:
+          'A Strategic Analysis of Corporate Bitcoin Adoption and Treasury Reserve Implementation',
+        descriptionsList: [
+          {
+            sectionTitle: 'Lombard Internal Research',
+            descriptions: [
+              'This whitepaper examines the emerging trend of corporate Bitcoin (BTC) treasury adoption as a strategic\n' +
+                'capital allocation framework for publicly traded companies. Through comprehensive analysis of pioneering\n' +
+                'cases including MicroStrategy (NASDAQ: MSTR) and Metaplanet Inc. (TSE: 3350), we demonstrate\n' +
+                'that disciplined Bitcoin treasury strategies can generate substantial equity value premiums beyond the\n' +
+                'underlying cryptocurrency holdings. Our research reveals that companies implementing BTC allocations\n' +
+                'of 5-15% of cash reserves have achieved share price performance improvements of +50% to +300% over\n' +
+                '12-36 month periods, driven by market recognition of Bitcoin’s inflation hedge properties and scarcity\n' +
+                'value.',
+            ],
+          },
+        ],
+        Icon: <PdfIcon className="min-w-12 w-12 h-12" />,
+        link: '/Lombard-Equity-Vehicle.pdf',
+      },
+    ],
+  },
+  {
+    date: '2025',
+    items: [
+      {
+        title: 'LBTC: Bringing Bitcoin Back to Its Roots as True Peer-to-Peer Cash',
+        descriptionsList: [
+          {
+            sectionTitle: 'Internal research',
+            descriptions: [
+              'Bitcoin was originally envisioned by Satoshi Nakamoto as a peer-to-peer electronic cash system, yet over time it evolved primarily into “digital gold” due to scalability limits, high fees, and slow settlement. LBTC (Liquid Bitcoin Token) seeks to restore Bitcoin’s transactional utility by combining its scarcity and trust with speed, liquidity, and yield. Fully collateralized 1:1 with native BTC, LBTC enables Bitcoin to move seamlessly across multiple chains with low fees and fast settlement, while also earning staking rewards via the Babylon protocol. This makes Bitcoin both spendable and productive, positioning LBTC as a “stablecoin-like” medium of exchange for the crypto economy, without detaching from BTC’s value. By leveraging decentralized custody, automated proof-of-reserves, and integrations across DeFi, LBTC revives Bitcoin’s role as internet cash while maintaining Bitcoin as the ultimate settlement layer. In doing so, it modernizes Satoshi’s vision, allowing Bitcoin holders to participate fluidly in payments, smart contracts, and cross-chain finance, while preserving the assurance that 1 LBTC will always equal 1 BTC.',
+            ],
+          },
+        ],
+        Icon: <PdfIcon className="min-w-12 w-12 h-12" />,
+        link: '/LBTC_Bringing_Bitcoin_Back_to_Its_Roots_as_True_Peer_to_Peer_Cash.pdf',
+      },
+    ],
+  },
+  {
+    date: '2025',
+    items: [
+      {
+        title:
           'BitFrost: A GG20-Based Threshold Signature Scheme for Secure Cross-Chain Native Token Transfers',
         descriptionsList: [
           {
