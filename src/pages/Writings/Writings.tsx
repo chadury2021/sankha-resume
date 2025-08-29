@@ -9,32 +9,6 @@ const data: { date: string; items: IDateCardProps['items'] }[] = [
     date: '2025',
     items: [
       {
-        title:
-          'A Strategic Analysis of Corporate Bitcoin Adoption and Treasury Reserve Implementation',
-        descriptionsList: [
-          {
-            sectionTitle: 'Lombard Internal Research',
-            descriptions: [
-              'This whitepaper examines the emerging trend of corporate Bitcoin (BTC) treasury adoption as a strategic\n' +
-                'capital allocation framework for publicly traded companies. Through comprehensive analysis of pioneering\n' +
-                'cases including MicroStrategy (NASDAQ: MSTR) and Metaplanet Inc. (TSE: 3350), we demonstrate\n' +
-                'that disciplined Bitcoin treasury strategies can generate substantial equity value premiums beyond the\n' +
-                'underlying cryptocurrency holdings. Our research reveals that companies implementing BTC allocations\n' +
-                'of 5-15% of cash reserves have achieved share price performance improvements of +50% to +300% over\n' +
-                '12-36 month periods, driven by market recognition of Bitcoin’s inflation hedge properties and scarcity\n' +
-                'value.',
-            ],
-          },
-        ],
-        Icon: <PdfIcon className="min-w-12 w-12 h-12" />,
-        link: '/Lombard-Equity-Vehicle.pdf',
-      },
-    ],
-  },
-  {
-    date: '2025',
-    items: [
-      {
         title: 'LBTC: Bringing Bitcoin Back to Its Roots as True Peer-to-Peer Cash',
         descriptionsList: [
           {
