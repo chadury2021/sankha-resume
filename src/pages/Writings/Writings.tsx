@@ -12,7 +12,7 @@ const data: { date: string; items: IDateCardProps['items'] }[] = [
         title: 'Universal Liquidity Coordination Protocol For Agent-Based Market Making',
         descriptionsList: [
           {
-            sectionTitle: 'Bitfrost',
+            sectionTitle: 'Internal research',
             descriptions: [
               'A universal liquidity coordination protocol is proposed to unify fragmented liquidity in today’s multi-chain DeFi landscape. The protocol enables liquidity to be locked on a source chain while being made available for quoting and trading across multiple destination chains (L1s and L2s) in real time. Market making is carried out by a network of autonomous agents that compete to fill user trade intents\n' +
                 'with optimal pricing. The design combines on-chain smart contracts and cross-chain messaging to coordinate swaps atomically across chains. Key features include an agent bonding and slashing mechanism for security, an optimistic cross-chain execution model for low latency, and measures for MEV mitigation such as off-chain order batching and Dutch auctions. We compare this approach\n' +
