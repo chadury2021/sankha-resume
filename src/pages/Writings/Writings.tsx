@@ -5,6 +5,25 @@ import DateCard, { IDateCardProps } from '../../components/reusable/DateCard';
 import LinkText from '../../components/reusable/LinkText.tsx';
 
 const data: { date: string; items: IDateCardProps['items'] }[] = [
+  {
+    date: '2025',
+    items: [
+      {
+        title:
+          'Draft: A Continuous Decentralized Alignment and Monitoring Framework for Personal AI',
+        descriptionsList: [
+          {
+            sectionTitle: 'Internal research',
+            descriptions: [
+              'The rapid evolution of artificial intelligence is reshaping economic and social landscapes, offering the promise of abundance and human flourishing while raising urgent concerns about misalignment. If left unchecked, AI systems may optimize for objectives irrelevant—or harmful—to humanity. Addressing this requires alignment mechanisms that are continuous, transparent, and human-centered.  A blockchain-based platform that enforces model-agnostic, privacy-preserving, decentralized, and scalable human oversight. By combining standardized model interaction protocols with cryptographic privacy guarantees and blockchain-mediated transparency creates a universal framework for monitoring AI behavior and incentivizing adherence to alignment standards at global scale.',
+            ],
+          },
+        ],
+        Icon: <PdfIcon className="min-w-12 w-12 h-12" />,
+        link: '/ML-5.pdf',
+      },
+    ],
+  },
   // {
   //   date: '2025',
   //   items: [
