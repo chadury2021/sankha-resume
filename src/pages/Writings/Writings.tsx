@@ -9,6 +9,27 @@ const data: { date: string; items: IDateCardProps['items'] }[] = [
     date: '2025',
     items: [
       {
+        title: 'Universal Liquidity Coordination Protocol For Agent-Based Market Making',
+        descriptionsList: [
+          {
+            sectionTitle: 'Bitfrost',
+            descriptions: [
+              'A universal liquidity coordination protocol is proposed to unify fragmented liquidity in today’s multi-chain DeFi landscape. The protocol enables liquidity to be locked on a source chain while being made available for quoting and trading across multiple destination chains (L1s and L2s) in real time. Market making is carried out by a network of autonomous agents that compete to fill user trade intents\n' +
+                'with optimal pricing. The design combines on-chain smart contracts and cross-chain messaging to coordinate swaps atomically across chains. Key features include an agent bonding and slashing mechanism for security, an optimistic cross-chain execution model for low latency, and measures for MEV mitigation such as off-chain order batching and Dutch auctions. We compare this approach\n' +
+                'with UniswapX’s intent-based auctions, CoW Protocol’s batch solver system, and the LayerZero cross-chain infrastructure. Our protocol offers a modular, efficient, and secure universal liquidity layer that dramatically improves capital efficiency and user experience by allowing on-demand liquidity sharing across networks. We discuss the system architecture in detail – covering agent design, message passing, execution logic, hedging strategies, and security – and outline incentive\n' +
+                'structures that encourage robust agent participation. The result is a multi-agent, on-chain/off-chain hybrid system for highly efficient and secure cross-chain market making, mitigating MEV and latency challenges while seamlessly routing liquidity wherever it’s needed.',
+            ],
+          },
+        ],
+        Icon: <PdfIcon className="min-w-12 w-12 h-12" />,
+        link: '/BitFrost_Final_Paper_Market-Making.pdf',
+      },
+    ],
+  },
+  {
+    date: '2025',
+    items: [
+      {
         title:
           'Draft: A Continuous Decentralized Alignment and Monitoring Framework for Personal AI',
         descriptionsList: [
