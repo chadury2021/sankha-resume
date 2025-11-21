@@ -29,13 +29,16 @@ const Home = () => {
         <p className="mb-3 text-sm">
           Built and scaled $1B+ weekly trading infrastructure across BitMEX and Binance.
         </p>
+        <p className="mb-3 text-sm">Building BitFrost : the unified clearinghouse for crypto.</p>
+        <p className="mb-3 text-sm">
+          Previously led protocol research at{' '}
+          <LinkText url="https://www.lombard.finance/" title="Lombard" />. DeFi protocol specialist
+          at <LinkText url="https://babylonlabs.io/" title="Babylon" /> and{' '}
+          <LinkText url="https://thorchain.org/" title="Thorchain" />.
+        </p>
         <p className="mb-8 text-sm">
-          Currently driving protocol research at{' '}
-          <LinkText url="https://www.lombard.finance/" title="Lombard" /> while pioneering
-          cross-chain financial primitives—Bitcoin staking (
-          <LinkText url="https://babylonlabs.io/" title="Babylon protocol" />) to liquidity
-          optimization models (<LinkText url="https://thorchain.org/" title="Thorchain" />
-          ).
+          Product-focused, mechanism-driven, and passionate in turning deep protocol research into
+          usable systems.
         </p>
         <Link
           to="/experience"
