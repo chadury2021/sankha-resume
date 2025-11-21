@@ -29,7 +29,10 @@ const Home = () => {
         <p className="mb-3 text-sm">
           Built and scaled $1B+ weekly trading infrastructure across BitMEX and Binance.
         </p>
-        <p className="mb-3 text-sm">Building BitFrost : the unified clearinghouse for crypto.</p>
+        <p className="mb-3 text-sm">
+          Building <LinkText url="https://bitfrost.xyz/" title="BitFrost" /> : the unified
+          clearinghouse for crypto.
+        </p>
         <p className="mb-3 text-sm">
           Previously led protocol research at{' '}
           <LinkText url="https://www.lombard.finance/" title="Lombard" />. DeFi protocol specialist
