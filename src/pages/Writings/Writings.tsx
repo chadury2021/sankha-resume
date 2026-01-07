@@ -9,6 +9,35 @@ const data: { date: string; items: IDateCardProps['items'] }[] = [
     date: '2025',
     items: [
       {
+        title:
+          'Staking, Restaking, and Inflation: A Game-Theoretic Analysis of Yield Sustainability\n' +
+          'in Shared Security Protocols',
+        descriptionsList: [
+          {
+            sectionTitle: 'Internal research',
+            descriptions: [
+              'We study the economic sustainability of large-scale staking and restaking protocols that\n' +
+                'secure multiple networks using externally valuable assets such as Bitcoin or Ether, while\n' +
+                'compensating stakers primarily through inflation of a native token. We develop a stylized\n' +
+                'discrete-time model in which protocol revenue is small relative to staked capital, creating\n' +
+                'a structural mismatch between demanded yield and realizable cash flows. In equilibrium,\n' +
+                'this mismatch generates either (i) a contractionary outcome in which staked capital shrinks\n' +
+                'until yields are fully funded by real revenue, or (ii) an inflationary death spiral characterized by accelerating token issuance, declining prices, and eventual collapse. We show that\n' +
+                'purely inflation-funded yields are generically unstable in the absence of sufficient external\n' +
+                'demand for the native token. We discuss mechanism-design features that can restore sustainability by endogenizing risk, constraining capital inflows, or tying rewards directly to\n' +
+                'realized revenue.',
+            ],
+          },
+        ],
+        Icon: <PdfIcon className="min-w-12 w-12 h-12" />,
+        link: '/staking_restaking_paper.pdf',
+      },
+    ],
+  },
+  {
+    date: '2025',
+    items: [
+      {
         title: 'Universal Liquidity Coordination Protocol For Agent-Based Market Making',
         descriptionsList: [
           {
