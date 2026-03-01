@@ -26,17 +26,18 @@ const MainLayout = () => {
   return (
     <div className="min-h-screen">
       {/* Hamburger for mobile */}
-      {!isHomePage && <Header open={sidebarOpen} setOpen={setSidebarOpen} />}
+      <Header open={sidebarOpen} setOpen={setSidebarOpen} />
       {/* Centered container for sidebar + content */}
       <div
-        className={cn({
-          'container pt-6 lg:pt-10 w-full flex gap-x-[5.625rem] h-full': !isHomePage,
+        className={cn('container pt-6 lg:pt-10 w-full flex gap-x-[5.625rem] h-full', {
+          'max-lg:flex-col': isHomePage,
         })}
       >
-        {!isHomePage && <Sidebar open={sidebarOpen} setOpen={setSidebarOpen} />}
+        <Sidebar open={sidebarOpen} setOpen={setSidebarOpen} />
         <main
           className={cn('flex-1', {
             'pb-6 lg:pb-10': !isHomePage,
+            'py-6 lg:py-10': isHomePage,
             'blur-sm pointer-events-none': sidebarOpen,
           })}
         >
