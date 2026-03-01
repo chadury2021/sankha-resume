@@ -10,8 +10,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `npm run lint:fix` — Auto-fix ESLint issues
 - `npm run format` — Prettier formatting
 - `npm run preview` — Preview production build
+- `npm test` — Run all tests (Vitest)
+- `npm run test:watch` — Run tests in watch mode
+- `npm run test:coverage` — Run tests with coverage report
 
-No test framework is configured.
+Run a single test file: `npx vitest run src/lib/utils.test.ts`
 
 ## Architecture
 
