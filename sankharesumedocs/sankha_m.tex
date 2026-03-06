@@ -1,0 +1,270 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PlushCV - One Page Two Column Resume
+% LaTeX Template
+% Version 1.0 (11/28/2021)
+%
+% Author:
+% Shubham Mazumder (http://mazumder.me)
+%
+% Hacked together from:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add more icon options 
+% 4. Fix hacky left alignment on contact line
+% 5. Remove Hacky fix for awkward extra vertical space
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the vertical limit.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%Icons:
+%%Main: https://icons8.com/icons/carbon-copy
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{plushcv}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\namesection{Sankha}{Banerjee}{Staff Engineer · Distributed Systems \& Protocol Design}{\contactline{\href{https://sankha-resume.vercel.app}{SB}}{\href{https://github.com/sbneo2022}{sbneo2022}}{\href{https://www.linkedin.com/in/sankha-banerjee-8a04419/}{Sankha Banerjee}}{\href{mailto:sankha80@gmail.com}{sankha80@gmail.com}}{\href{tel:+16178669426}{6178669426}}}
+
+% \namesection{Firstname}{Lastname}{Full Stack Software Engineer}{\contactline{\href{https://www.mazumder.me}{mazumder.me}}{\href{https://www.github.com/sansquoi}{sansquoi}}{\href{https://www.linkedin.com/mazumders}{mazumders}}{\href{mailto:shubham.mazumder@gmail.com}{first.last@email.com}}{\href{tel:+1999999999}{9999999999}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.70\textwidth} 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience}
+\runsubsection{BitFrost Prime}
+\descript{| Founder \& Technical Lead}
+\location{Nov 2025 – Current}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\sectionsep
+\item Designing a formally verified cross-venue clearing protocol for crypto derivatives using Quint/TLA+ and the Apalache model checker — same class of methods used to verify AWS distributed systems.
+\item Architecting a deterministic state-machine–based clearing engine in Rust with sub-millisecond settlement finality and mathematically proven liveness/safety invariants.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Lombard Protocol}
+\descript{| Head of Protocol Research}
+\location{Jan 2025 – Oct 2025}
+\begin{tightemize}
+\sectionsep
+\item Owned technical specification for a Bitcoin liquid-staking protocol on Cosmos SDK; system onboarded 20K BTC (\$1B TVL) in 60 days with zero-downtime validator coordination across chains.
+\item Led 9-person cross-functional squad; reduced research-to-prototype cycle by 40\% by instituting formal specification review gates before implementation.
+\item Designed data-driven discovery loop that identified two enterprise DeFi use cases, directly shaping the protocol's cross-chain state-management architecture.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Babylon Labs}
+\descript{| Chief Protocol Engineer / Economist}
+\location{Jun 2023 – Dec 2024}
+\begin{tightemize}
+\sectionsep
+\item Co-authored economic design and whitepaper securing \$90M Series A (Paradigm, Polychain, Bullish); formally modeled tokenomics, slashing parameters, and fee-capture invariants.
+\item Shipped IBC-compatible staking module adopted on Cosmos Hub via governance (99.4\% approval); designed the cross-chain message-passing and validator-set coordination layer.
+\item Grew validator network 0 → 120+ nodes; defined BTC-secured finality protocol providing economic safety guarantees for consumer chains.
+\item Translated cryptoeconomic trade-offs (parameterized slashing, AVS registry) into protocol specs, cutting roadmap decision cycles by 2×.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Nibiru Chain}
+\descript{| Core Protocol Engineer}
+\location{Sep 2022 – Mar 2023}
+\begin{tightemize}
+\sectionsep
+\item Designed and shipped core Cosmos SDK modules (oracle consensus, perpetual swaps engine) — foundational infrastructure used by all downstream applications on the L1.
+\item Mentored three engineers; two promoted to tech-lead within 12 months.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{THORChain}
+\descript{| Senior Protocol Engineer}
+\location{Jun 2019 – Aug 2022}
+\begin{tightemize}
+\sectionsep
+\item Designed cross-chain incentive pendulum algorithms (Cosmos ↔ BNB Chain) achieving 6× swap volume growth and 30\% impermanent-loss reduction; results cited in the protocol's economic security model.
+\item Scaled validator infrastructure to sustain 3× traffic spikes with zero downtime; authored operational runbooks still used by the active validator set.
+\item Advised early Cosmos projects (Kava, Akash, Band) on distributed protocol economics and launch architecture, helping each raise >\$5M.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Eastmore Group}
+\descript{| Portfolio Manager, Crypto Quant Strategies}
+\location{Jun 2017 – Dec 2018}
+\begin{tightemize}
+\sectionsep
+\item Ran multi-strategy crypto futures book (Sharpe >1.5, AUM \$50M) via stat-arb and trend-following models across fragmented exchange venues.
+\item Built real-time ML pipeline (order-book microstructure + NLP sentiment) processing 50K ticks/sec with sub-10ms signal latency.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Castleton Commodities (Citadel Nat Gas Desk)}
+\descript{| Quantitative Researcher / Trader}
+\location{Nov 2013 – Mar 2016}
+\begin{tightemize}
+\sectionsep
+\item Built the quantitative trading platform for power \& gas derivatives integrating weather/load fundamentals and real-time pricing; increased desk revenue by \$10M YoY.
+\item Implemented time-series infrastructure (InfluxDB + MLflow experiment tracking), accelerating model refresh from weekly to daily.
+\end{tightemize}
+\sectionsep
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     AWARDS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \section{Awards} 
+% \begin{tabular}{rll}
+% 2020	     & Finalist & Lorem Ipsum\\
+% 2018	     & $2^{nd}$ & Dolor Sit Amet\\
+% 2015	     & Finalist  & Cras posuere\\
+% \\
+% \end{tabular}
+
+% \sectionsep
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.25\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+\subsection{Programming}
+\sectionsep
+\location{Languages:}
+Rust \textbullet{} Go \textbullet{} Python \textbullet{} C++ \\
+Solidity \textbullet{} TypeScript \textbullet{} SQL \\
+\sectionsep
+\location{Distributed Systems:}
+Consensus protocols \textbullet{} BFT \\
+State-machine replication \\
+Cross-chain coordination (IBC) \\
+Cosmos SDK \textbullet{} Solana \\
+\sectionsep
+\location{Formal Methods:}
+TLA+ \textbullet{} Quint \textbullet{} Apalache \\
+Property-based testing \\
+\sectionsep
+\subsection{Infrastructure}
+\sectionsep
+Docker \textbullet{} CI/CD \textbullet{} Git \\
+InfluxDB \textbullet{} BigQuery \textbullet{} MLflow \\
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education} 
+\subsection{Massachusetts Institute of Technology}
+\descript{PhD in Mechanical/Applied Mathematics}
+\location{2012 | Cambridge, MA} \\
+\location{ Cum. GPA: 4.0/ 4.0 }
+
+\sectionsep
+\subsection{Technical University Munich}
+\descript{Bachelor's in Computer Science 
+\\and Physics}
+\location{2007 | Munich, Germany}
+\\
+\location{ Cum. GPA: 4.0 / 4.0 }
+\sectionsep
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %     REFERENCES
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{References} 
+\href{https://www.linkedin.com/in/david-tse-01656774/}{\textbf{David Tse}, Founder, Babylon}
+\begingroup
+\setbox0=\hbox{
+\includegraphics[scale=0.1,trim={0 1cm 0cm 0cm}]{icons/main/mail.png}\hspace{0.3cm} dntse@stanford.edu
+}
+\parbox{\wd0}{\box0}
+\endgroup
+\begingroup
+\setbox0=\hbox{
+\includegraphics[scale=0.1,trim={0 1.25cm -0.4cm 0cm}]{icons/main/phone.png}\hspace{0.3cm}+15107175434
+}
+\parbox{\wd0}{\box0}\endgroup
+\\
+\sectionsep
+\href{https://www.linkedin.com/in/sunnya97/}{\textbf{Sunny Agarwal}}, Founder , Osmosis
+\\
+\begingroup
+\setbox0=\hbox{
+\includegraphics[scale=0.1,trim={0 1cm 0cm 0cm}]{icons/main/mail.png}\hspace{0.3cm} sunny@osmosis.team
+}
+\parbox{\wd0}{\box0}
+\endgroup
+\begingroup
+\setbox0=\hbox{
+\includegraphics[scale=0.1,trim={0 1.25cm -0.4cm 0cm}]{icons/main/phone.png}\hspace{0.3cm}+19084446275
+}
+\parbox{\wd0}{\box0}\endgroup
+\\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COURSEWORK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \section{Coursework}
+
+% \subsection{Graduate}
+% Graduate Algorithms \textbullet{}\\ 
+% Advanced Computer Architecture \textbullet{}\\ 
+% Operating Systems \textbullet{}\\ 
+% Artificial Intelligence \textbullet{}\\
+% Visualization For Scientific Data \\
+% \sectionsep
+
+% \subsection{Undergraduate}
+
+% Database Management Systems \textbullet{}\\
+% Object Oriented Analysis and Design \textbullet{}\\
+% Artificial Intelligence and Expert Systems \textbullet{}\\
+% Scripting Languages and Web Tech \textbullet{}\\
+% Software Engineering \\
+
+\end{minipage} 
+\end{document}  \documentclass[]{article}
+
+
