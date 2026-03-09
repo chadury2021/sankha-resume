@@ -18,7 +18,7 @@ const Experience = () => {
           milestones, professional transitions, and blockchain-related contributions.
         </p>
         <a
-          href="/sankha_banerjee.pdf"
+          href="/Sankha_Banerjee.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="text-sm font-medium inline-flex items-center h-9 px-3 rounded-lg text-white bg-gradient-to-b from-[#04D9D9] to-[#17A0BF]"
